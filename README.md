@@ -1,4 +1,4 @@
-[![Dependency Status](https://david-dm.org/datatypevoid/vulgar.svg)](https://david-dm.org/datatypevoid/vulgar) [![Build Status](https://travis-ci.org/datatypevoid/vulgar.svg?branch=master)](https://travis-ci.org/datatypevoid/vulgar) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/angular-2-mean-webpack-starter) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
+[![Dependency Status](https://david-dm.org/datatypevoid/vulgar.svg)](https://david-dm.org/datatypevoid/vulgar) [![Build Status](https://travis-ci.org/datatypevoid/vulgar.svg?branch=master)](https://travis-ci.org/datatypevoid/vulgar) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/vulgar) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
 <p align="center">
   <a href="http://www.davidniciforovic.com" target="_blank">
     <img src="https://cloud.githubusercontent.com/assets/10481547/13732046/5ba42ab0-e94f-11e5-9962-ab04cbd6779f.png" alt="MEAN with NG2 and Webpack" />
@@ -231,7 +231,7 @@ vulgar/
 
 ### Linux
 
-- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials]( http://nodeschool.io/#workshoppers) to get you started.
+- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials](http://nodeschool.io/#workshoppers) to get you started.
 - _MongoDB_ - [Download](https://www.mongodb.org/downloads) and Install mongodb - [Checkout their manual](https://docs.mongodb.org/manual/) if you're just starting.
 
 If you're using ubuntu, this is the preferred repository to use...
@@ -246,7 +246,7 @@ or use [Node Version Manager](https://github.com/creationix/nvm) to easily manag
 
 ### Windows
 
-- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials]( http://nodeschool.io/#workshoppers) to get you started.
+- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials](http://nodeschool.io/#workshoppers) to get you started.
 - _MongoDB_ - Follow the great tutorial from the mongodb site - ["Install Mongodb On Windows"](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
 - _Git_ - The easiest way to install git and then run the rest of the commands through the _git bash_ application (via command prompt) is by downloading and installing [Git for Windows](http://git-scm.com/download/win)
 
