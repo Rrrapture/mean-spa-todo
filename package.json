@@ -1,7 +1,7 @@
 {
   "name": "vulgar",
   "version": "1.0.0",
-  "description": "A MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by @datatype_void",
+  "description": "A simple and scalable MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage, Dev/Prod), Express, MongoDB, Mongoose, Node, Redux, @ngrx/store,  PassportJS, Socket.io, Karma, Protractor, Jasmine, Istanbul, SASS Support, TypeScript, TSLint, NG2Lint, Hot Module Replacement, Docco, Gulp, and Webpack by @datatype_void",
   "author": "David Newman <blackshuriken@hotmail.com>",
   "homepage": "https://github.com/datatypevoid/vulgar",
   "license": "MIT",
