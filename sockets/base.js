@@ -1,7 +1,7 @@
 // ```
 // base.js
 // (c) 2015 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // base.js may be freely distributed under the MIT license
 // ```
 

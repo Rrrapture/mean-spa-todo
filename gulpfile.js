@@ -5,7 +5,7 @@ require("babel-register");
 // ```
 // gulpfile.js
 // (c) 2016 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // gulpfile.js may be freely distributed under the MIT license
 // ```
 

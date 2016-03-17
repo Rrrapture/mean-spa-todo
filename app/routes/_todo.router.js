@@ -1,7 +1,7 @@
 // ```
 // _todo.js
 // (c) 2016 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // _todo.js may be freely distributed under the MIT license
 // ```
 

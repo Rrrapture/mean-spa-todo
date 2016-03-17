@@ -1,6 +1,6 @@
 # Read and contribute to the Wiki
 
-<https://github.com/datatypevoid/ng2-mean-webpack/wiki>
+<https://github.com/datatypevoid/vulgar/wiki>
 
 # Submitting Pull Requests
 

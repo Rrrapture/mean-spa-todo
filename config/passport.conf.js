@@ -1,7 +1,7 @@
 // ```
 // passport.conf.js
 // (c) 2015 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // passport.conf.js may be freely distributed under the MIT license
 // ```
 

@@ -1,7 +1,7 @@
 // ```
 // todo.model.js
 // (c) 2016 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // todo.model.js may be freely distributed under the MIT license
 // ```
 

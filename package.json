@@ -1,9 +1,9 @@
 {
-  "name": "ng2-mean-webpack",
+  "name": "vulgar",
   "version": "1.0.0",
-  "description": "A MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by Da5id",
+  "description": "A MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by @datatype_void",
   "author": "David Newman <blackshuriken@hotmail.com>",
-  "homepage": "https://github.com/datatypevoid/ng2-mean-webpack",
+  "homepage": "https://github.com/datatypevoid/vulgar",
   "license": "MIT",
   "scripts": {
     "clean": "npm cache clean && rimraf node_modules doc typings coverage dist",
@@ -128,10 +128,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/datatypevoid/ng2-mean-webpack.git"
+    "url": "https://github.com/datatypevoid/vulgar.git"
   },
   "bugs": {
-    "url": "https://github.com/datatypevoid/ng2-mean-webpack/issues"
+    "url": "https://github.com/datatypevoid/vulgar/issues"
   },
   "engines": {
     "node": ">= 4.2.1 <= 5",

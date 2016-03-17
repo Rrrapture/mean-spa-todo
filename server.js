@@ -1,7 +1,7 @@
 // ```
 // server.js
-// (c) 2015 David Newman
-// blackshuriken@hotmail.com
+// (c) 2016 David Newman
+// david.r.niciforovic@gmail.com
 // server.js may be freely distributed under the MIT license
 // ```
 

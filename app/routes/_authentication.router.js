@@ -1,7 +1,7 @@
 // ```
 // _authentication.router.js
 // (c) 2016 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // _authentication.router.js may be freely distributed under the MIT license
 // ```
 

@@ -1,7 +1,7 @@
 // ```
 // user.model.js
 // (c) 2016 David Newman
-// blackshuriken@hotmail.com
+// david.r.niciforovic@gmail.com
 // user.model.js may be freely distributed under the MIT license
 // ```
 

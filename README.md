@@ -1,11 +1,13 @@
-[![Dependency Status](https://david-dm.org/datatypevoid/ng2-mean-webpack.svg)](https://david-dm.org/datatypevoid/ng2-mean-webpack) [![Build Status](https://travis-ci.org/datatypevoid/ng2-mean-webpack.svg?branch=master)](https://travis-ci.org/datatypevoid/ng2-mean-webpack) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/datatypevoid/ng2-mean-webpack) [![Issue Stats](http://issuestats.com/github/datatypevoid/ng2-mean-webpack/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/ng2-mean-webpack) [![Issue Stats](http://issuestats.com/github/datatypevoid/ng2-mean-webpack/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/ng2-mean-webpack) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/angular-2-mean-webpack-starter) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
+[![Dependency Status](https://david-dm.org/datatypevoid/vulgar.svg)](https://david-dm.org/datatypevoid/vulgar) [![Build Status](https://travis-ci.org/datatypevoid/vulgar.svg?branch=master)](https://travis-ci.org/datatypevoid/vulgar) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/angular-2-mean-webpack-starter) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
 <p align="center">
   <a href="http://www.davidniciforovic.com" target="_blank">
     <img src="https://cloud.githubusercontent.com/assets/10481547/13732046/5ba42ab0-e94f-11e5-9962-ab04cbd6779f.png" alt="MEAN with NG2 and Webpack" />
   </a>
 </p>
 
-# MEAN Stack Development Starter [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation)
+# v#!g@r [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation)
+
+## MEAN Stack Development Starter
 
 > A MEAN stack development kit featuring [Angular 2](https://angular.io) ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/), [Http](https://angular.io/docs/js/latest/api/http/), [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter), [Tests](https://angular.io/docs/js/latest/api/test/), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Express](http://expressjs.com/), [MongoDB](https://www.mongodb.org/) (complete with [Mongoose](https://www.mongoosejs.org/)), [Node](https://www.nodejs.org/), [PassportJS](https://www.passportjs.org/), [Socket.IO](https://www.socket.io/), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [Typings](https://github.com/typings/typings), [Sass](https://sass-lang.com), [Docco](https://jashkenas.github.io/docco/), [TsLint](http://palantir.github.io/tslint/), [Ng2Lint](https://github.com/mgechev/ng2lint), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack](http://webpack.github.io/), as well as ES6/ES7 support for the back-end by [datatype_void](https://twitter.com/datatype_void).
 
@@ -42,42 +44,28 @@ The rest of the stack features:
 
 ## Quick start
 
-> Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
+> Install the stack then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
-# clone our repo
-# --depth 1 removes all but one .git commit history
-git clone --depth 1 https://github.com/datatypevoid/ng2-mean-webpack.git
+# install vulgar-cli
+$ npm install -g vulgar-cli
 
-# change directory to our repo
-cd ng2-mean-webpack
+# initialize installer
+$ vulgar init <nameOfApplication>
+
+# change directory to new application root
+$ cd <nameOfApplication>
 
 # add required global libraries
- npm install -g typings webpack-dev-server concurrently
+$ npm install -g typings webpack-dev-server concurrently
 
 # install the repo with npm
-npm install
-
-# create configuration json file for env vars
-# save in `config/` as `config.json`
-{
-  "ENV" : "development",
-  # Cannot be 8080 as this conflicts with our Webpack dev server
-  "PORT" : 3000,
-  "MONGO_URI" : {
-    "DEVELOPMENT" : "mongodb://[username:password]@host[:port]",
-    "PRODUCTION" : "mongodb://[username:password]@host[:port]",
-    "TEST" : "mongodb://[username:password]@host[:port]"
-  },
-  # Generate your own 256-bit WEP key here:
-  # http://randomkeygen.com/
-  # Note that you don't need to use specifically
-  # this, but it will certainly suffice
-  "SESSION_SECRET" : "355FC4FE9348639B4E4FED1B8E93C"
-}
+# required only if you declined automated dependency installation
+# during installation
+$ npm install
 
 # build code
-npm run build
+$ npm run build
 
 # start up the stack
 
@@ -86,11 +74,11 @@ npm run build
 # hot module reloading
 # `npm` run watch` uses `webpack` to watch the necessary files
 # and build on file change
-npm start
+$ npm start
 
 # in a separate terminal:
 # start `Express` server
-gulp serve
+$ gulp serve
 ```
 
 go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
@@ -116,7 +104,7 @@ go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
 
 ```
-ng2-mean-webpack/
+vulgar/
  │
  ├──app/                            * our source files for back-end routing and MongoDB object modelling
  │   ├──models/                     * model definitions for Mongoose
@@ -237,36 +225,64 @@ ng2-mean-webpack/
 
 # Getting Started
 
+## Prerequisite Technologies
+
+### What you need to run this app:
+
+### Linux
+
+- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials]( http://nodeschool.io/#workshoppers) to get you started.
+- _MongoDB_ - [Download](https://www.mongodb.org/downloads) and Install mongodb - [Checkout their manual](https://docs.mongodb.org/manual/) if you're just starting.
+
+If you're using ubuntu, this is the preferred repository to use...
+
+```bash
+$ curl -sL https://deb.nodesource.com/setup | sudo bash -
+$ sudo apt-get update
+$ sudo apt-get install nodejs
+```
+
+or use [Node Version Manager](https://github.com/creationix/nvm) to easily manage and update your `node` installations and global dependencies
+
+### Windows
+
+- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials]( http://nodeschool.io/#workshoppers) to get you started.
+- _MongoDB_ - Follow the great tutorial from the mongodb site - ["Install Mongodb On Windows"](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
+- _Git_ - The easiest way to install git and then run the rest of the commands through the _git bash_ application (via command prompt) is by downloading and installing [Git for Windows](http://git-scm.com/download/win)
+
+### OSX
+
+- _Node.js_ -  [Download](http://nodejs.org/download/) and Install Node.js or use the packages within brew or macports.
+- _MongoDB_ - Follow the tutorial here - [Install mongodb on OSX](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+- _git_ - Get git [from here](http://git-scm.com/download/mac).
+
+### *Ensure you are running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+*
+
 ## Dependencies
-
-What you need to run this app:
-
-- `node` and `npm` (`brew install node`)
-- Ensure you're running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+
 
 Once you have those, you should install these globals with `npm install --global`:
 
-- `webpack` (`npm install --global webpack`)
-- `webpack-dev-server` (`npm install --global webpack-dev-server`)
-- `karma` (`npm install --global karma-cli`)
-- `protractor` (`npm install --global protractor`)
-- `typings` (`npm install --global typings`)
-- `typescript` (`npm install --global typescript`)
+- `webpack` (`$ npm install --global webpack`)
+- `webpack-dev-server` (`$ npm install --global webpack-dev-server`)
+- `karma` (`$ npm install --global karma-cli`)
+- `protractor` (`$ npm install --global protractor`)
+- `typings` (`$ npm install --global typings`)
+- `typescript` (`$ npm install --global typescript`)
 
 ## Installing
 
-- `fork` this repo
-- `clone` your fork
-- `npm install` to install all dependencies
-- `typings install` to install necessary typings
-- create `config.json` **_see below_**
-- `npm run build` to build necessary front-end code with Webpack
-- `npm start` to enable hot module reloading and build on file change
+- `$ npm install -g vulgar-cli`
+- `$ vulgar init` to install a new instance of the v#!g@r `MEAN` stack framework
+- `$ npm install -g typings webpack-dev-server concurrently` to install global dependencies
+- `$ npm install` to install all local dependencies
+- `$ typings install` to install necessary typings
+- `$ npm run build` to build necessary front-end code with Webpack
+- `$ npm start` to enable hot module reloading and build on file change
 - In a new terminal, `node server` to start the server for the first time
 
 ## config.json
 
-The `server.conf.js` file is expecting certain `environment` `variables` to be set within `Node`. The `env.conf.js` has functions to check whether the expected `environment` `variables` have been setup before proceeding to start up the rest of the server. You can create a file called `config.json` and store it in the `config` directory that looks something like this:
+The `server.conf.js` file is expecting certain `environment` `variables` to be set within `Node`. The `env.conf.js` has functions to check whether the expected `environment` `variables` have been setup before proceeding to start up the rest of the server. It uses a file called `config.json` stored in the `config` directory that looks something like this:
 
 ```
 {
@@ -285,11 +301,13 @@ The `server.conf.js` file is expecting certain `environment` `variables` to be s
   # this, but it will certainly suffice
   "SESSION_SECRET" : "355FC4FE9348639B4E4FED1B8E93C"
 }
+
+You should definitely change your `SESSION_SECRET` for even the most lacksadaisical development effort.
 ```
 
 ## Running the app
 
-After you have installed all dependencies and created your `config.json` file, you can now run the app. First, you must start up the back-end server in a separate terminal using the `gulp serve` command. This will fire up our Express app using `nodemon`, which will watch for file changes and restart our backend when necessary. Next use the `npm start` command in the original terminal which runs two `npm` scripts in parallel: `npm run server` to start `webpack-dev-server` for building our front-end in the computer's memory, enabling hot module reloadig; `npm run watch` to watch all of the front-end files and build them upon changes. You can now fire up your favorite web browser and visit the running application at `localhost:8080`!
+After you have installed all dependencies and modified your `config.json` file, you can now run the app. First, you must start up the back-end server in a separate terminal using the `gulp serve` command. This will fire up our Express app using `nodemon`, which will watch for file changes and restart our backend when necessary. Next use the `npm start` command in the original terminal which runs two `npm` scripts in parallel: `npm run server` to start `webpack-dev-server` for building our front-end in the computer's memory, enabling hot module reloadig; `npm run watch` to watch all of the front-end files and build them upon changes. You can now fire up your favorite web browser and visit the running application at `localhost:8080`!
 
 ### server
 
@@ -297,17 +315,17 @@ After you have installed all dependencies and created your `config.json` file, y
 # development
 # package front-end files with Webpack and hot reload
 # upon any changes
-npm start
+$ npm start
 # use `Gulp` in a second terminal to run the Express
 # app responsible for our back-end
-gulp serve
+$ gulp serve
 # optionally use `Gulp` in a third terminal to auto
 # generate documentation and lint `Sass`
-gulp
+$ gulp
 
 # production
-npm run build:prod
-npm run server:prod
+$ npm run build:prod
+$ npm run server:prod
 ```
 
 ## Other commands
@@ -315,74 +333,74 @@ npm run server:prod
 ### start `Express` back-end
 
 ```bash
-gulp serve
+$ gulp serve
 ```
 
 ### build documentation
 
 ```bash
-gulp build:docs
+$ gulp build:docs
 ```
 
 ### watch and build documentation
 
 ```bash
-gulp watch:docs
+$ gulp watch:docs
 ```
 
 ### watch and lint sass
 
 ```bash
-gulp watch:sass
+$ gulp watch:sass
 ```
 
 ### build files
 
 ```bash
 # development
-npm run build:dev
+$ npm run build:dev
 # production
-npm run build:prod
+$ npm run build:prod
 ```
 
 ### watch and build files
 
 ```bash
-npm run watch
+$ npm run watch
 ```
 
 ### run tests
 
 ```bash
-npm run test
+$ npm run test
 ```
 
 ### watch and run our tests
 
 ```bash
-npm run watch:test
+$ npm run watch:test
 ```
 
 ### run end-to-end tests
 
 ```bash
 # make sure you have your server running in another terminal
-npm run e2e
+$ npm run e2e
 ```
 
 ### run webdriver (for end-to-end)
 
 ```bash
-npm run webdriver:update
-npm run webdriver:start
+$ npm run webdriver:update
+$ npm run webdriver:start
 ```
 
 ### run Protractor's elementExplorer (for end-to-end)
 
 ```bash
-npm run webdriver:start
+$ npm run webdriver:start
 # in another terminal
-npm run e2e:live
+$ npm run e2e:live
 ```
 
 # Contributing
@@ -398,7 +416,7 @@ You can include more examples as components but they must introduce a new concep
 TypeScript 1.7.x includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.
 
 ```
-npm install --global typescript
+$ npm install --global typescript
 ```
 
 ## Use a TypeScript-aware editor
@@ -417,7 +435,7 @@ We have good experience using these editors:
 ## Use latest Typings module
 
 ```
-npm install --global typings
+$ npm install --global typings
 ```
 
 ## Custom Type Definitions
@@ -425,7 +443,7 @@ npm install --global typings
 When including 3rd party modules you also need to include the type definition for the module if they don't provide one within the module. You can try to install it with typings
 
 ```
-typings install node --save
+$ typings install node --save
 ```
 
 If you can't find the type definition in the registry we can make an ambient definition in this file for now. For example
