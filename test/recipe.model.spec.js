@@ -4,7 +4,6 @@
 let utils = require('./utils');
 import chai from 'chai';
 let should = chai.should();
-let expect = chai.expect();
 
 // import our `Recipe` mongoose model
 import Recipe from '../app/models/recipe.model';
