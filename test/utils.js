@@ -23,13 +23,10 @@ beforeEach((done) => {
 
         if(error)
           console.error(error);
-
-        else {
-
-          return done();
-        }
       });
     }
+    
+    return done();
   }
 
   if (mongoose.connection.readyState === 0) {
