@@ -2,7 +2,8 @@
 
 // import the `mongoose` helper utilities
 let utils = require('./utils');
-let should = require('chai').should();
+import chai from 'chai';
+let should = chai.should();
 
 // import our `Todo` mongoose model
 import Todo from '../app/models/todo.model';
