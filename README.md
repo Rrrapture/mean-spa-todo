@@ -47,8 +47,8 @@ The rest of the stack features:
 > Install the stack then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
-# install vulgar-cli
-$ npm install -g vulgar-cli
+# install vulgar-cli and the generator it hooks into
+$ npm install -g vulgar-cli generator-vulgar
 
 # initialize installer
 $ vulgar init <nameOfApplication>
@@ -57,7 +57,7 @@ $ vulgar init <nameOfApplication>
 $ cd <nameOfApplication>
 
 # add required global libraries
-$ npm install -g typings webpack-dev-server concurrently
+$ npm install -g typings webpack webpack-dev-server concurrently
 
 # install the repo with npm
 # required only if you declined automated dependency installation
@@ -268,10 +268,12 @@ Once you have those, you should install these globals with `npm install --global
 - `protractor` (`$ npm install --global protractor`)
 - `typings` (`$ npm install --global typings`)
 - `typescript` (`$ npm install --global typescript`)
+- `concurrently` (`$ npm install --global concurrently`)
+- `mocha` (`$ npm install --global mocha`)
 
 ## Installing
 
-- `$ npm install -g vulgar-cli`
+- `$ npm install -g vulgar-cli generator-vulgar`
 - `$ vulgar init` to install a new instance of the v#!g@r `MEAN` stack framework
 - `$ npm install -g typings webpack-dev-server concurrently` to install global dependencies
 - `$ npm install` to install all local dependencies
