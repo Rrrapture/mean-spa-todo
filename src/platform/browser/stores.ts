@@ -1,3 +1,7 @@
+//# Global Redux Stores
+//
+//** These `redux` `stores` are available in any template **
+
 // Import module to provide an app `store` for the life-cycle of the app
 import {provideStore} from '@ngrx/store';
 

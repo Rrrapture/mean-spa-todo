@@ -1,3 +1,7 @@
+//# Global Providers
+//
+//** These `providers` are available in any template **
+
 import {provide} from 'angular2/core';
 
 // Angular 2

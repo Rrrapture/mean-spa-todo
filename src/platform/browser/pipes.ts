@@ -1,3 +1,7 @@
+//# Global Pipes
+//
+//** These `pipes` are available in any template **
+
 import {provide, PLATFORM_PIPES} from 'angular2/core';
 
 //# APPLICATION_PIPES
