@@ -9,7 +9,7 @@ var helpers = require('./helpers');
 var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 var DefinePlugin  = require('webpack/lib/DefinePlugin');
 //# Webpack Constants
-var ENV = process.env.ENV = process.env.NODE_ENV = 'test';
+const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
 //# Webpack Configuration
 // See: http://webpack.github.io/docs/configuration.html#cli
@@ -149,7 +149,7 @@ module.exports = {
   ],
 
   // Other module loader config
-  
+
   // Include polyfills or mocks for various node stuff
   // Description: Node configuration
   //
