@@ -530,7 +530,7 @@ You can include your type definitions in this file until you create one for the 
 
 - Error: Cannot find module 'tapable'
 
-  - Remove `node_modules/` and run `npm install` again
+  - Remove `node_modules/` and run `npm cache clean` then `npm install`
 
 ## Acknowledgements
 
