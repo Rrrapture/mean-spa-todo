@@ -1,8 +1,10 @@
+// ```
 // @datatype_void
+// david.r.niciforovic@gmail.com
+// webpack.config.js may be freely distributed under the MIT license
+// ```
 
-/*
- * Helper: root(), and rootDir() are defined at the bottom
- */
+// Helper: root(), and rootDir() are defined at the bottom
 var helpers = require('./helpers');
 // Webpack Plugins
 var webpack = require('webpack');
@@ -17,13 +19,15 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var WebpackMd5Hash    = require('webpack-md5-hash');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlug
-var ENV = process.env.NODE_ENV = process.env.ENV = 'production';
-var HOST = process.env.HOST || 'localhost';
-var PORT = process.env.PORT || 8080;
+
+//# Webpack Constants
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 8080;
 
 var config = require('./config/config.json');
 
-var metadata = {
+const METADATA = {
   title: 'Angular 2 MEAN Webpack Starter Kit by @datatype_void',
   baseUrl: '/',
   host: HOST,
@@ -31,12 +35,10 @@ var metadata = {
   ENV: ENV
 };
 
-/*
- * Config
- */
+//# Webpack Configuration
 module.exports = {
-  // static data for index.html
-  metadata: metadata,
+  // Static data for index.html
+  metadata: METADATA,
 
   devtool: 'source-map',
   debug: false,
@@ -83,7 +85,7 @@ module.exports = {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader',
         query: {
-          // remove TypeScript helpers to be injected below by DefinePlugin
+          // Remove TypeScript helpers to be injected below by DefinePlugin
           'compilerOptions': {
             'removeComments': true
           }
@@ -105,14 +107,14 @@ module.exports = {
         loader: 'raw-loader'
       },
 
-      // support for .html as raw text
+      // Support for .html as raw text
       {
         test: /\.html$/,
         loader: 'raw-loader'
       },
 
-      // support for sass imports
-      // add CSS rules to your document:
+      // Support for sass imports
+      // Add CSS rules to your document:
       // `require("!style!css!sass!./file.scss");`
       {
         test: /\.scss$/,
@@ -137,37 +139,37 @@ module.exports = {
       filename: '[name].bundle.js',
       minChunks: Infinity
     }),
-    // static assets
+    // Static assets
     new CopyWebpackPlugin([
       {
         from: 'src/assets',
         to: 'assets'
       }
     ]),
-    // generating html
+    // Generating html
     new HtmlWebpackPlugin({ template: 'src/index.html' }),
     new DefinePlugin({
       // Environment helpers
-      'ENV': JSON.stringify(metadata.ENV),
+      'ENV': JSON.stringify(METADATA.ENV),
       'HMR': false
     }),
     new UglifyJsPlugin({
-      // to debug prod builds uncomment //debug lines and comment //prod lines
+      // To debug prod builds uncomment //debug lines and comment //prod lines
 
-      // beautify: true,//debug
-      // mangle: false,//debug
-      // dead_code: false,//debug
-      // unused: false,//debug
-      // deadCode: false,//debug
+      // beautify: true, //debug
+      // mangle: false, //debug
+      // dead_code: false, //debug
+      // unused: false, //debug
+      // deadCode: false, //debug
       // compress : { screw_ie8 : true, keep_fnames: true, drop_debugger: false, dead_code: false, unused: false, }, // debug
-      // comments: true,//debug
+      // comments: true, //debug
 
-      beautify: false,//prod
-      // disable mangling because of a bug in angular2 beta.1, beta.2 and beta.3
+      beautify: false, //prod
+      // Disable mangling because of a bug in angular2 beta.1, beta.2 and beta.3
       // TODO(mastertinner): enable mangling as soon as angular2 beta.4 is out
       // mangle: { screw_ie8 : true },//prod
       mangle: {
-        screw_ie8 : true,
+        screw_ie8: true,
         except: [
           'App',
           'About',
@@ -216,13 +218,13 @@ module.exports = {
           'ReplacePipe',
           'I18nPluralPipe',
           'I18nSelectPipe'
-        ] // needed for uglify RouterLink problem
-      },// prod
+        ] // Needed for uglify RouterLink problem
+      }, // Production
       compress : { screw_ie8 : true },//prod
       comments: false//prod
 
     }),
-   // include uglify in production
+   // Include uglify in production
     new CompressionPlugin({
       algorithm: helpers.gzipMaxLevel,
       regExp: /\.css$|\.html$|\.js$|\.map$/,
@@ -235,7 +237,7 @@ module.exports = {
     failOnHint: true,
     resourcePath: 'src',
   },
-  //Needed to workaround Angular 2's html syntax => #id [bind] (event) *ngFor
+  // Needed to workaround Angular 2's html syntax => #id [bind] (event) *ngFor
   htmlLoader: {
     minimize: true,
     removeAttributeQuotes: false,
@@ -243,7 +245,7 @@ module.exports = {
     customAttrSurround: [ [/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/] ],
     customAttrAssign: [ /\)?\]?=/ ]
   },
-  // don't use devServer for production
+  // Note: Don't use devServer for production
   node: {
     global: 'window',
     process: false,

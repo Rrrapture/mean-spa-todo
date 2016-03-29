@@ -1,17 +1,23 @@
+// ```
 // @datatype_void
+// david.r.niciforovic@gmail.com
+// webpack.config.js may be freely distributed under the MIT license
+// ```
 
+//# Webpack Plugins
 var webpack = require('webpack');
 var helpers = require('./helpers');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
-var ENV = process.env.ENV = process.env.NODE_ENV = 'development';
-var HMR = helpers.hasProcessFlag('hot');
+//# Webpack Constants
+const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
+const HMR = helpers.hasProcessFlag('hot');
 
 var config = require('./config/config.json');
 
-var metadata = {
+const METADATA = {
   title: 'Angular 2 MEAN Webpack Starter Kit by @datatype_void',
   baseUrl: '/',
   host: '0.0.0.0',
@@ -19,21 +25,19 @@ var metadata = {
   ENV: ENV,
   HMR: HMR
 };
-/*
- * Config
- */
+//# Webpack Configuration
 module.exports = {
-  // static data for index.html
-  metadata: metadata,
+  // Static data for index.html
+  metadata: METADATA,
   devtool: 'cheap-module-eval-source-map',
   // cache: true,
   debug: true,
   // devtool: 'eval' // for faster builds use 'eval'
 
-  // our angular app
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
+    // Our primary app
     'main': './src/main.ts'
   },
 
@@ -53,8 +57,8 @@ module.exports = {
     preLoaders: [
       // { test: /\.ts$/, loader: 'tslint-loader', exclude: [ helpers.root('node_modules') ] },
       // TODO(datatypevoid):
-      //`exclude: [ helpers.root('node_modules/rxjs') ]`
-      //fixed with rxjs 5 beta.3 release
+      // `exclude: [ helpers.root('node_modules/rxjs') ]`
+      // Fixed with rxjs 5 beta.3 release
       { test: /\.js$/, loader: "source-map-loader",
         exclude: [ helpers.root('node_modules/rxjs') ]
       }
@@ -69,11 +73,11 @@ module.exports = {
       // Support for CSS as raw text
       { test: /\.css$/,   loader: 'raw-loader' },
 
-      // support for .html as raw text
+      // Support for .html as raw text
       { test: /\.html$/,  loader: 'raw-loader', exclude: [ helpers.root('src/index.html') ] },
 
-      // support for sass imports
-      // add CSS rules to your document:
+      // Support for sass imports
+      // Add CSS rules to your document:
       // `require("!style!css!sass!./file.scss");`
       {
         test: /\.scss$/,
@@ -81,7 +85,7 @@ module.exports = {
         exclude: [ helpers.root('node_modules') ]
       }
 
-      // if you add a loader include the resolve file extension above
+      // If you add a loader include the resolve file extension above
     ]
   },
 
@@ -94,23 +98,23 @@ module.exports = {
 
     new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills'], filename: '[name].bundle.js', minChunks: Infinity }),
-    // static assets
+    // Static assets
     new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
-    // generating html
+    // Generating html
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       chunksSortMode: 'none'
     }),
     // Environment Helpers  (when adding more properties make sure you include them in custom-typings.d.ts)
     new webpack.DefinePlugin({
-      'ENV': JSON.stringify(metadata.ENV),
+      'ENV': JSON.stringify(METADATA.ENV),
       'HMR': HMR
     })
   ],
 
   // Other module loader config
 
-  // our Webpack Development Server config
+  // Our Webpack Development Server config
 
   tslint: {
     emitErrors: false,
@@ -119,15 +123,15 @@ module.exports = {
   },
 
   devServer: {
-    // Proxy requests to our express server
+    // Proxy requests to our `Express` server
     proxy: {
       '*': {
         target: 'http://localhost:' + config.PORT,
         secure: false
       },
     },
-    port: metadata.port,
-    host: metadata.host,
+    port: METADATA.port,
+    host: METADATA.host,
     historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
