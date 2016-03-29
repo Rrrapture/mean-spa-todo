@@ -16,7 +16,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, Router} from 'angular2/router';
 
-import {Home} from './home/home';
+import {Home} from './home';
 
 // Import NgFor directive
 import {NgFor} from 'angular2/common';
@@ -82,7 +82,7 @@ import {Recipes} from './recipes/recipes.component';
   { path: '/redux', component: Recipes, name: 'Recipes' },
   // Async load a component using Webpack's require with
   // es6-promise-loader and webpack `require`
-  { path: '/about', name: 'About', loader: () => require('es6-promise!./about/about')('About') },
+  { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') },
 ])
 export class App {
   angularLogo = 'assets/img/angular-logo.png';
