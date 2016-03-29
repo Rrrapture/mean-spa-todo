@@ -9,15 +9,33 @@ import {Component} from 'angular2/core';
 console.log('`About` component loaded asynchronously');
 
 @Component({
-    selector: 'about',
-    template: `david.r.niciforovic@gmail.com`
+  selector: 'about',
+  template: `patrick@AngularClass.com`
 })
 export class About {
-    constructor() {
+  constructor() {
 
-    }
+  }
 
-    ngOnInit() {
-        console.log('hello `About` component');
-    }
+  ngOnInit() {
+    console.log('hello `About` component');
+    // static data that is bundled
+    var mockData = require('assets/mock-data/mock-data.json');
+    console.log('mockData', mockData);
+    // if you're working with mock data you can also use http.get('assets/mock-data/mock-data.json')
+    this.asyncDataWithWebpack();
+  }
+  asyncDataWithWebpack() {
+    // you can also async load mock data with 'es6-promise-loader'
+    var asyncMockData = require('es6-promise!assets/mock-data/mock-data.json');
+    setTimeout(() => {
+
+      let asyncData = asyncMockData();
+      asyncData.then(json => {
+        console.log('async mockData', json);
+      });
+
+    });
+  }
+
 }
