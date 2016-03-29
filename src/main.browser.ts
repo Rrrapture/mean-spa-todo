@@ -4,7 +4,7 @@ import {bootstrap} from 'angular2/platform/browser';
 //## App Component
 //
 //** our top level component that holds all of our components **
-import {DIRECTIVES, PIPES, PROVIDERS} from './platform/browser';
+import {DIRECTIVES, PIPES, PROVIDERS, STORES} from './platform/browser';
 import {ENV_PROVIDERS} from './platform/environment';
 import {App} from './app/app';
 
@@ -17,7 +17,8 @@ export function main() {
     ...ENV_PROVIDERS,
     ...PROVIDERS,
     ...DIRECTIVES,
-    ...PIPES
+    ...PIPES,
+    ...STORES
   ])
   .catch(err => console.error(err));
 }
