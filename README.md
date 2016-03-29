@@ -106,44 +106,54 @@ We use the component approach in our starter. This is the new standard for devel
 ```
 vulgar/
  │
- ├──app/                            * our source files for back-end routing and MongoDB object modelling
+ ├──app/                            * back-end routing and MongoDB object models
  │   ├──models/                     * model definitions for Mongoose
  │   │   ├──user.model.js           * a user model for use with PassportJS
- │   ├──routes/                     * store all modular REST API routes for Express here
+ │   ├──routes/                     * store modular REST API routes for Express here
  │   │   └──authentication          * an Express route for use with PassportJS
  │   │        .router.js
- │   └──routes.js                   * gather all of your Express routes and middleware here
+ │   └──routes.js                   * import Express routes and middleware here
  │
- ├──config/                         * configuration files for environment variables, Mongoose, and PassportJS
+ ├──config/                         * configuration files for environment variables,
+ |   ├──helpers.js                  * helper functions for our configuration files
+ |   ├──spec-bundle.js              * magic that sets up the NG2 testing environment
+ |   ├──karma.conf.js               * karma config for our unit tests
+ |   ├──protractor.conf.js          * protractor config for our end-to-end tests
+ │   ├──webpack.dev.js              * our development webpack config
+ │   ├──webpack.prod.js             * our production webpack config
+ │   ├──webpack.test.js             * our testing webpack config Mongoose, and PassportJS
  │   ├──config.json/                * allows definition of environment variables
- │   ├──env.conf.js/                * contains utility functions for setting up environment vars
+ │   ├──env.conf.js/                * utility functions for setting up env vars
  │   ├──mongoose.conf.js/           * configuration file for Mongoose
  │   └──passport.conf.js/           * configuration file for PassportJS
  │
  ├──sockets/                        * directory for socket.io functionality
  │   └──base.js/                    * a basic socket.io server function
  │
- ├──src/                            * our source files that will be compiled to javascript
+ ├──src/                            * source that will be compiled to javascript
  │   ├──main.ts                     * our entry file for our browser environment
  │   │
  │   ├──index.html                  * Index.html: where we generate our index page
  │   │
  │   ├──polyfills.ts                * our polyfills file
  │   │
+ |   ├──vendor.ts                   * our vendor file
+ │   │
  │   ├──app/                        * WebApp: folder
  │   │   ├──todo/                   * an example component directory
  │   │   │   ├──todo.component.ts   * a simple Angular 2 component
- │   │   │   ├──todo.e2e.ts         *  simple test of components in todo.component.ts
+ │   │   │   ├──todo.e2e.ts         * simple test of components in todo.component.ts
  │   │   │   ├──todo.spec.ts        * a simple end-to-end test for /todo
  │   │   │   ├──todo.html           * template for our component
  │   │   │   └──todo.service.ts     * Angular 2 service linking to our API
  │   │   ├──app.spec.ts             * a simple test of components in app.ts
  │   │   ├──app.e2e.ts              * a simple end-to-end test for /
- │   │   └──app.ts                  * App.ts: a simple version of our App component components
+ │   │   └──app.ts                  * App.ts: primary application component
  │   │
  │   ├──assets/                     * static assets are served here
  │   │   ├──icon/                   * our list of icons from www.favicon-generator.org
- │   │   ├──service-worker.js       * ignore this. Web App service worker that's not complete yet
+ │   │   ├──service-worker.js       * ignore this. Web App service worker that's not
+ │   │   │                            complete yet
  │   │   ├──robots.txt              * for search engines to crawl your website
  │   │   └──human.txt               * for humans to know who the developers are
  │   │
@@ -153,7 +163,7 @@ vulgar/
  │       │   ├──_animations.scss    * Animation keyframe definitions
  │       │   ├──_reset.scss         * Reset/normalize
  │       │   ├──_typography.scss    * Typography rules
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       ├──components/
@@ -161,7 +171,7 @@ vulgar/
  │       │   ├──_carousel.scss      * Carousel
  │       │   ├──_cover.scss         * Cover
  │       │   ├──_dropdown.scss      * Dropdown
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       ├─ layout/
@@ -171,19 +181,19 @@ vulgar/
  │       │   ├──_footer.scss        * Footer
  │       │   ├──_sidebar.scss       * Sidebar
  │       │   ├──_forms.scss         * Forms
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       ├─ pages/
  │       │   ├──_home.scss          * Home specific styles
  │       │   ├──_contact.scss       * Contact specific styles
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       ├─ themes/
  │       │   ├──_theme.scss         * Default theme
  │       │   ├──_admin.scss         * Admin theme
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       ├─ utils/
@@ -191,36 +201,39 @@ vulgar/
  │       │   ├──_functions.scss     * Sass Functions
  │       │   ├──_mixins.scss        * Sass Mixins
  │       │   ├──_helpers.scss       * Class & placeholders helpers
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       ├──vendors/
  │       │   ├──_bootstrap.scss     * Bootstrap
  │       │   ├──_jquery-ui.scss     * jQuery UI
- │       │   ├──_module.scss        * Load all partials from this directory into single partial
+ │       │   ├──_module.scss        * Load all partials into a single partial
  │       │   └── …                  * Etc.
  │       │
  │       │
- │       └──main.scss               * Main sass file to load all partials for this project
+ │       └──main.scss               * Main sass file importing all partials
  │
  ├──.babelrc                        * configure Babel 6 plugins and ES6/ES7 presets
  │
- ├──server.js                       * ES5 `.js` file importing the server code along with a Babel 6 hook to transpile server ES6/ES7 code on the fly
- ├──server.conf.js                  * configure Express/Socket.io application, connect to database, instantiate Mongoose models, define API and front-end Angular routes, et cetera
+ ├──server.js                       * ES5 `.js` importing the server code along with a
+ │                                    Babel 6 hook to transpile server ES6/ES7 code
+ │                                    on the fly
+ ├──server.conf.js                  * configure Express/Socket.io application, connect to
+ │                                    database, instantiate Mongoose models, define API
+ │                                    and front-end Angular routes, et cetera
  │
- ├──gulpfile.js                     * ES5 `gulpfile` importing the `gulp` workflow code along with a Babel 6 hook to transpile the ES6 code on the fly
- ├──gulpfile.conf.js                * contains all of the workflow management delegated to `gulp`: auto documentation generation; `sass` linting; `nodemon`, et cetera
+ ├──gulpfile.js                     * ES5 `gulpfile` importing the `gulp` workflow code
+ │                                    along with a Babel 6 hook to transpile the ES6
+ │                                    code on the fly
+ ├──gulpfile.conf.js                * contains all of the workflow management delegated
+ │                                    to `gulp`: auto documentation generation; `sass`
+ │                                    linting; `nodemon`, et cetera
  │
- ├──spec-bundle.js                  * ignore this magic that sets up our angular 2 testing environment
- ├──karma.config.js                 * karma config for our unit tests
- ├──protractor.config.js            * protractor config for our end-to-end tests
+ ├──tslint.json                     * typescript lint config
+ ├──typedoc.json                    * typescript documentation generator
  │
  ├──tsconfig.json                   * config that webpack uses for typescript
  ├──typings.json                    * our typings manager
- ├──package.json                    * what npm uses to manage it's dependencies
- │
- ├──webpack.config.js               * our development webpack config
- ├──webpack.test.config.js          * our testing webpack config
- └──webpack.prod.config.js          * our production webpack config
+ └──package.json                    * what npm uses to manage it's dependencies
 ```
 
 # Getting Started
