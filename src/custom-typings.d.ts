@@ -53,7 +53,7 @@ interface WebpackModule {
   };
 }
 
-interface WebpackRequire extends NodeRequireFunction {
+interface WebpackRequire {
   context(file: string, flag?: boolean, exp?: RegExp): any;
 }
 
