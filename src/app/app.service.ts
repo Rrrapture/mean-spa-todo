@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {WebpackState} from 'angular2-hmr';
 
+// This serves as an alternative to using the `redux` store and methods
 @Injectable()
 export class AppState {
 
@@ -18,7 +19,7 @@ export class AppState {
   }
 
   set(prop: string, value: any) {
-    
+
     return this._state[prop] = value;
   }
 }
