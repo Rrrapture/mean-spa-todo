@@ -64,7 +64,7 @@ module.exports = {
   entry: {
     'polyfills':'./src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'main':'./src/main.ts' // our angular app
+    'main':'./src/main.browser.ts' // our primary Angular 2 application
   },
 
   // Options affecting the output of the compilation.

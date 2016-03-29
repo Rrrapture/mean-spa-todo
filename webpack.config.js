@@ -56,8 +56,8 @@ module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    // Our primary app
-    'main': './src/main.ts'
+    // Our primary Angular 2 application
+    'main': './src/main.browser.ts'
   },
 
   // Options affecting the resolving of modules.
@@ -111,9 +111,11 @@ module.exports = {
       // Extracts SourceMaps for source files that as added as sourceMappingURL comment.
       //
       // See: https://github.com/webpack/source-map-loader
-      { test: /\.js$/, loader: "source-map-loader",
-        exclude: [ helpers.root('node_modules/rxjs') ]
-      }
+      {test: /\.js$/, loader: 'source-map-loader', exclude: [
+        // Sourcemap problems with these packages
+        helpers.root('node_modules/rxjs'),
+        helpers.root('node_modules/@angular2-material')
+      ]}
     ],
     // An array of automatically applied loaders.
     //
