@@ -9,7 +9,8 @@
 
 // Prefer `CoreJS` over the polyfills commented out above
 import 'core-js';
-import 'zone.js/dist/zone-microtask';
+import 'zone.js';
+//import 'zone.js/dist/zone-microtask'; Angular 2 beta.10 problem
 
 if ('production' === ENV) {
   // Production
