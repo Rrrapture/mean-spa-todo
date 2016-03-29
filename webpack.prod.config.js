@@ -136,7 +136,6 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills'],
-      filename: '[name].bundle.js',
       minChunks: Infinity
     }),
     // Static assets
