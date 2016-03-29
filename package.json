@@ -46,7 +46,8 @@
 
     "docs": "./node_modules/.bin/typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/",
 
-    "start": "concurrently --kill-others --raw \"npm run server:dev:hmr\" \"npm run watch\"",
+    "start": "concurrently --kill-others --raw \"npm run server:dev\" \"npm run watch\"",
+       "start:hmr": "concurrently --kill-others --raw \"npm run server:dev:hmr\" \"npm run watch\"",
 
     "typings-install": "./node_modules/.bin/typings install",
 
