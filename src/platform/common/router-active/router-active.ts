@@ -12,7 +12,7 @@ import {
 } from 'angular2/core';
 import {Instruction, RouterLink} from 'angular2/router';
 
-/**
+/*
  * RouterActive dynamically finds the first element with routerLink and toggles the active class
  *
  * ## Use
