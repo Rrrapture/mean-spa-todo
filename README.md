@@ -528,6 +528,10 @@ You can include your type definitions in this file until you create one for the 
   - { path: '/about', loader: () => require('es6-promise!./about/about')('About') }
   - Also see [es6-promise-loader](https://github.com/gdi2290/es6-promise-loader)
 
+- Error: Cannot find module 'tapable'
+
+  - Remove `node_modules/` and run `npm install` again
+
 ## Acknowledgements
 
 > [AngularClass](https://github.com/AngularClass) for their Angular 2 Webpack repo which served as a starting point for the front-end
