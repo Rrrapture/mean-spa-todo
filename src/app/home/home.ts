@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {AppState} from '../app.service';
 
 import {Title} from './services/title';
 import {XLarge} from './directives/x-large';
@@ -37,10 +38,10 @@ import {NgFor} from 'angular2/common';
 })
 export class Home {
   // Set our default values
-  data = { value: '' };
+  localState = { value: '' };
 
   // TypeScript public modifiers
-  constructor(public title: Title) {
+  constructor(public appState: AppState, public title: Title) {
 
   }
 
@@ -66,4 +67,8 @@ export class Home {
     // this.title.getData().subscribe(data => this.data = data);
   }
 
+  submitState(value) {
+    console.log('submitState', value);
+    this.appState.set('value', value);
+  }
 }
