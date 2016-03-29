@@ -16,6 +16,8 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, Router} from 'angular2/router';
 
+import {AppState} from './app.service';
+
 import {Home} from './home';
 
 // Import NgFor directive
@@ -73,6 +75,8 @@ import {Recipes} from './recipes/recipes.component';
         <img [src]="angularLogo" width="10%">
       </div>
     </footer>
+
+    <pre>this.state = {{ state | json }}</pre>
   `
 })
 @RouteConfig([
@@ -89,16 +93,24 @@ export class App {
   name = 'Angular 2 MEAN Webpack Starter';
   url = 'https://twitter.com/datatype_void';
 
-  constructor() {
+  // Pass in our application `state`
+  // Alternative to using `redux`
+  constructor(public appState: AppState) {}
 
+  // Get the current application state
+  get state() {
+
+    return this.appState.get();
+  }
+
+  // Fire off upon initialization
+  ngOnInit() {
+
+    console.log('Initial App State', this.state);
   }
 }
 
 /*
- * Please review the https://github.com/datatype_void/angular2-examples/ repo as it is updated for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
  * For help or questions please contact us at @datatype_void on twitter
  * or our chat on Slack at https://VulgarDisplayOfPower.com/slack-join
- * or via chat on Gitter at https://gitter.im/datatype_void/angular2-webpack-starter
  */
