@@ -11,6 +11,19 @@ var webpackMerge = require('webpack-merge');
 // Common `webpack` configuration for `dev` and `prod`
 var commonConfig = require('./webpack.common.js');
 
+// Webpack Plugins
+var DefinePlugin = require('webpack/lib/DefinePlugin');
+
+//# Webpack Constants
+const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
+const HMR = helpers.hasProcessFlag('hot');
+const METADATA = {
+  host: process.env.HOST || '0.0.0.0',
+  port: process.env.PORT || 8080,
+  ENV: ENV,
+  HMR: HMR
+};
+
 //# Environment Config Object
 var envConfig = require('./config.json');
 
@@ -60,7 +73,19 @@ module.exports = webpackMerge(commonConfig, {
     // TODO(datatypevoid): investigate the necessity of these two
     // following lines
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    // Plugin: DefinePlugin
+    // Description: Define free variables.
+    // Useful for having development builds with debug logging or adding global constants.
+    //
+    // Environment helpers
+    //
+    // See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
+    // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
+    new webpack.DefinePlugin({
+      'ENV': JSON.stringify(METADATA.ENV),
+      'HMR': HMR
+    })
   ],
 
   // Other module loader config

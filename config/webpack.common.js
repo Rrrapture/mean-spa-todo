@@ -209,19 +209,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       chunksSortMode: helpers.packageSort(['polyfills', 'vendor', 'main'])
-    }),
-
-    // Plugin: DefinePlugin
-    // Description: Define free variables.
-    // Useful for having development builds with debug logging or adding global constants.
-    //
-    // Environment helpers
-    //
-    // See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
-    // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
-    new webpack.DefinePlugin({
-      'ENV': JSON.stringify(METADATA.ENV),
-      'HMR': HMR
     })
 
   ],

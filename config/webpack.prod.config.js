@@ -14,9 +14,21 @@ var commonConfig = require('./webpack.common.js');
 // Webpack Plugins
 var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 var DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
+var DefinePlugin = require('webpack/lib/DefinePlugin');
 var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 var CompressionPlugin = require('compression-webpack-plugin');
 var WebpackMd5Hash = require('webpack-md5-hash');
+
+//# Webpack Constants
+const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
+const HOST = process.env.HOST || '0.0.0.0';
+const PORT = process.env.PORT || 8080;
+const METADATA = {
+  host: HOST,
+  port: PORT,
+  ENV: ENV,
+  HMR: false
+};
 
 module.exports = webpackMerge(commonConfig, {
   // Developer tool to enhance debugging
@@ -71,6 +83,19 @@ module.exports = webpackMerge(commonConfig, {
     // See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     // See: https://github.com/webpack/docs/wiki/optimization#deduplication
     new DedupePlugin(),
+
+    // Plugin: DefinePlugin
+    // Description: Define free variables.
+    // Useful for having development builds with debug logging or adding global constants.
+    //
+    // Environment helpers
+    //
+    // See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
+    // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
+    new webpack.DefinePlugin({
+      'ENV': JSON.stringify(METADATA.ENV),
+      'HMR': HMR
+    }),
 
     // Plugin: UglifyJsPlugin
     // Description: Minimize all JavaScript output of chunks.
