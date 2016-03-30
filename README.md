@@ -87,11 +87,9 @@ go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 
 - [File Structure](#file-structure)
 - [Getting Started](#getting-started)
-
   - [Dependencies](#dependencies)
   - [Installing](#installing)
   - [Running the app](#running-the-app)
-
 - [Contributing](#contributing)
 - [TypeScript](#typescript)
 - [Typings](#typings)
