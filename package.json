@@ -32,7 +32,7 @@
         "prebuild:dev": "npm run clean:dist",
       "build:dev": "node --max-old-space-size=4096 node_modules/webpack/bin/webpack --config config/webpack.dev.js --progress --profile --colors --display-error-details --display-cached",
         "prebuild:prod": "npm run clean:dist",
-      "build:prod": "node --max-old-space-size=4096 node_modules/webpack/bin/webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached --bail",
+      "build:prod": "node --max-old-space-size=4096 node_modules/webpack/bin/webpack --config config/webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached --bail",
 
     "server": "npm run server:dev",
       "server:dev": "node --max-old-space-size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base src/",
