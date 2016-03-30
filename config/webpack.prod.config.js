@@ -94,7 +94,7 @@ module.exports = webpackMerge(commonConfig, {
     // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
     new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
-      'HMR': HMR
+      'HMR': METADATA.HMR
     }),
 
     // Plugin: UglifyJsPlugin
