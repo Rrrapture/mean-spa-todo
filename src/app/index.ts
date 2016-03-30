@@ -17,9 +17,9 @@ export const APP_PROVIDERS = [
 import {provideStore} from '@ngrx/store';
 
 // Import all of the files necessary for our `recipes` component
-import {RecipeService} from '../../app/recipes/recipe.service';
-import {recipes} from '../../app/recipes/recipes.reducer';
-import {selectedRecipe} from '../../app/recipes/selected-recipe.reducer';
+import {RecipeService} from './recipes/recipe.service';
+import {recipes} from './recipes/recipes.reducer';
+import {selectedRecipe} from './recipes/selected-recipe.reducer';
 
 //# Application Redux Stores
 //
