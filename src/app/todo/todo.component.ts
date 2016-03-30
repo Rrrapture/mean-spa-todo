@@ -14,10 +14,8 @@ import {NgFor} from 'angular2/common';
     // HTML tag for specifying this component
     selector: 'todo',
     // Let Angular 2 know about `Http` and `TodoService`
-    providers: [...HTTP_PROVIDERS, TodoService]
-})
-@View({
-    template: require('./todo.html'),
+    providers: [...HTTP_PROVIDERS, TodoService],
+    template: require('./todo.html')
 })
 export class Todo {
 
