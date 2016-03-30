@@ -1,16 +1,12 @@
 import {Injectable} from 'angular2/core';
-import {WebpackState} from 'angular2-hmr';
+import {HmrState} from 'angular2-hmr';
 
 // This serves as an alternative to using the `redux` store and methods
 @Injectable()
 export class AppState {
 
-  // NOTE: You must set the initial value
-  _state = {};
-
-  constructor(webpackState: WebpackState) {
-
-    this._state = webpackState.select('AppState', () => this._state);
+  @HmrState() _state = {}; // you must set the initial value
+    constructor() {
   }
 
   get(prop?: any) {
