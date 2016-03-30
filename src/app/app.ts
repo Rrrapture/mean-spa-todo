@@ -112,5 +112,5 @@ export class App {
 
 /*
  * For help or questions please contact us at @datatype_void on twitter
- * or our chat on Slack at https://VulgarDisplayOfPower.com/slack-join
+ * or our chat on Slack at http://www.davidniciforovic.com/wp-login.php?action=slack-invitation
  */
