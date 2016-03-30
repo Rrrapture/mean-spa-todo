@@ -4,21 +4,16 @@ import {bootstrap} from 'angular2/platform/browser';
 //## Platform and Environment
 //
 //** our providers/directives/pipes **
-import {DIRECTIVES, PIPES, PROVIDERS, STORES} from './platform/browser';
+import {DIRECTIVES, PIPES, PROVIDERS} from './platform/browser';
 import {ENV_PROVIDERS} from './platform/environment';
 
 //## App Component
 //
 //** our top level component that holds all of our components **
-import {App, AppState} from './app/app';
+import {App, APP_PROVIDERS, APP_STORES} from './app';
 
 // Bootstrap our Angular app with a top level component `App` and inject
 // our Services and Providers into Angular's dependency injection
-
-let APP_PROVIDERS = [
-  provideInitialState(initialState),
-  AppState
-];
 
 export function main(initialHmrState?: any): Promise<any> {
 
@@ -28,8 +23,8 @@ export function main(initialHmrState?: any): Promise<any> {
     ...PROVIDERS,
     ...DIRECTIVES,
     ...PIPES,
-    ...STORES,
-    ...APP_PROVIDERS
+    ...APP_PROVIDERS,
+    ...APP_STORES
   ])
   .catch(err => console.error(err));
 }
