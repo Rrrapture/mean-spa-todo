@@ -11,8 +11,7 @@ import {ENV_PROVIDERS} from './platform/environment';
 //## App Component
 //
 //** our top level component that holds all of our components **
-import {AppState} from './app/app.service';
-import {App} from './app/app';
+import {App, AppState} from './app/app';
 
 // Bootstrap our Angular app with a top level component `App` and inject
 // our Services and Providers into Angular's dependency injection

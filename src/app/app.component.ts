@@ -18,6 +18,8 @@ import {RouteConfig, Router} from 'angular2/router';
 
 import {AppState} from './app.service';
 
+import {RouterActive} from './shared/directives/router-active/router-active.directive';
+
 import {Home} from './home';
 
 // Import NgFor directive
@@ -37,7 +39,8 @@ import {Recipes} from './recipes/recipes.component';
   selector: 'app',
   providers: [  ],
   directives: [ Todo,
-                NgFor],
+                NgFor,
+                RouterActive],
   pipes: [],
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],

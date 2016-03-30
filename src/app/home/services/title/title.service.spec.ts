@@ -2,7 +2,6 @@ import {
   it,
   inject,
   injectAsync,
-  describe,
   beforeEachProviders,
   TestComponentBuilder
 } from 'angular2/testing';
@@ -10,15 +9,11 @@ import {
 import {Component, provide} from 'angular2/core';
 import {BaseRequestOptions, Http} from 'angular2/http';
 import {MockBackend} from 'angular2/http/testing';
-import {WebpackState} from 'angular2-hmr';
 
-// Load the implementations that should be tested
-import {Home} from './home';
-import {Title} from './services/title';
-import {AppState} from '../app.service';
 
-describe('Home', () => {
-  // provide our implementations or mocks to the dependency injector
+import {Title} from './title.service';
+
+describe('Title', () => {
   beforeEachProviders(() => [
     BaseRequestOptions,
     MockBackend,
@@ -29,26 +24,22 @@ describe('Home', () => {
       deps: [MockBackend, BaseRequestOptions]
     }),
 
-    WebpackState,
-    AppState,
-    Title,
-    Home
+    Title
   ]);
 
-  it('should have default data', inject([ Home ], (home) => {
-    expect(home.localState).toEqual({ value: '' });
+
+  it('should have http', inject([ Title ], (title) => {
+    expect(!!title.http).toEqual(true);
   }));
 
-  it('should have a title', inject([ Home ], (home) => {
-    expect(!!home.title).toEqual(true);
-  }));
-
-  it('should log ngOnInit', inject([ Home ], (home) => {
+  it('should get data from the server', inject([ Title ], (title) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 
-    home.ngOnInit();
+    title.getData();
     expect(console.log).toHaveBeenCalled();
+    expect(title.getData())
+      .toEqual({ value: 'Angular 2 MEAN Webpack Starter' });
   }));
 
 });

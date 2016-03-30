@@ -28,7 +28,6 @@ if ('production' === ENV) {
 
 }
 
-
 export const ENV_PROVIDERS = [
   ...PROVIDERS
 ];
