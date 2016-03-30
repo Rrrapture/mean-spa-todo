@@ -24,7 +24,7 @@ import {selectedRecipe} from './recipes/selected-recipe.reducer';
 //# Application Redux Stores
 //
 //** Redux stores for use with our Angular 2 app **
-export const STORES = [
+export const APP_STORES = [
   // These are the primary consumers of our app store
   RecipeService,
   // Inititialize app store available to entire app
