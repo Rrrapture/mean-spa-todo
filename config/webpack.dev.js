@@ -13,6 +13,8 @@ var commonConfig = require('./webpack.common.js');
 
 // Webpack Plugins
 var DefinePlugin = require('webpack/lib/DefinePlugin');
+var HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin');
+var NoErrorsPlugin = require('webpack/lib/NoErrorsPlugin');
 
 //# Webpack Constants
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
@@ -26,7 +28,6 @@ const METADATA = {
 
 //# Environment Config Object
 var envConfig = require('./config.json');
-
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -72,8 +73,8 @@ module.exports = webpackMerge(commonConfig, {
 
     // TODO(datatypevoid): investigate the necessity of these two
     // following lines
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new HotModuleReplacementPlugin(),
+    new NoErrorsPlugin(),
     // Plugin: DefinePlugin
     // Description: Define free variables.
     // Useful for having development builds with debug logging or adding global constants.
@@ -82,7 +83,7 @@ module.exports = webpackMerge(commonConfig, {
     //
     // See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
-    new webpack.DefinePlugin({
+    new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': HMR
     })

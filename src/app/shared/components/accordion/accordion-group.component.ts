@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 
 // Import NgClass directive
 import {NgClass} from 'angular2/common';
