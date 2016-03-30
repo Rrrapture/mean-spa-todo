@@ -422,7 +422,7 @@ $ npm run e2e:live
 ```
 
 # Configuration
-Configuration files live in `config/`. We are currently using `webpack`, `mocha`, `karma`, and `protractor` for different stages and parts of your full-stack application
+Configuration files live in `config/`. We are currently using `mongooose`, `passportJS`, `webpack`, `mocha`, `karma`, and `protractor` for different stages and parts of your full-stack application
 
 # Contributing
 Contibutors are welcome. If you are interested in collaborating with us or contributing to this project, please join our chat on [Slack]( http://www.davidniciforovic.com/wp-login.php?action=slack-invitation). You can also view our `Trello` board which is where the roadmap and task backlog live here https://trello.com/b/Kk4qnt2T/vulgar
