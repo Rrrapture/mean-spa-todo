@@ -67,6 +67,8 @@ module.exports = {
     // Ensure that root is `src`
     root: helpers.root('src'),
 
+    // remove other default values
+    modulesDirectories: ['node_modules']
   },
 
   // Options affecting the normal modules.
