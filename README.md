@@ -112,17 +112,20 @@ vulgar/
  │   │        .router.js
  │   └──routes.js                   * import Express routes and middleware here
  │
- ├──config/                         * configuration files for environment variables,
+ ├──config/                         * configuration files
  |   ├──helpers.js                  * helper functions for our configuration files
  |   ├──spec-bundle.js              * magic that sets up the NG2 testing environment
  |   ├──karma.conf.js               * karma config for our unit tests
  |   ├──protractor.conf.js          * protractor config for our end-to-end tests
  │   ├──webpack.dev.js              * our development webpack config
  │   ├──webpack.prod.js             * our production webpack config
- │   ├──webpack.test.js             * our testing webpack config Mongoose, and PassportJS
+ │   ├──webpack.test.js             * our test webpack config
  │   ├──config.json/                * allows definition of environment variables
  │   ├──env.conf.js/                * utility functions for setting up env vars
  │   ├──mongoose.conf.js/           * configuration file for Mongoose
+ │   ├──gulpfile.conf.js            * contains all of the workflow management delegated
+ │   │                                to `gulp`: auto documentation generation; `sass`
+ │   │                                linting; `nodemon`, et cetera
  │   └──passport.conf.js/           * configuration file for PassportJS
  │
  ├──sockets/                        * directory for socket.io functionality
@@ -215,16 +218,17 @@ vulgar/
  ├──server.js                       * ES5 `.js` importing the server code along with a
  │                                    Babel 6 hook to transpile server ES6/ES7 code
  │                                    on the fly
- ├──server.conf.js                  * configure Express/Socket.io application, connect to
+ ├──server.conf.js                  * configure Express application, connect to
  │                                    database, instantiate Mongoose models, define API
  │                                    and front-end Angular routes, et cetera
  │
  ├──gulpfile.js                     * ES5 `gulpfile` importing the `gulp` workflow code
  │                                    along with a Babel 6 hook to transpile the ES6
  │                                    code on the fly
- ├──gulpfile.conf.js                * contains all of the workflow management delegated
- │                                    to `gulp`: auto documentation generation; `sass`
- │                                    linting; `nodemon`, et cetera
+ │
+ ├──protractor.conf.js              * Exposes `protractor.conf` from `config/`
+ │
+ ├──karma.conf.js                   * Exposes `karma.conf` from `config/`
  │
  ├──tslint.json                     * typescript lint config
  ├──typedoc.json                    * typescript documentation generator
