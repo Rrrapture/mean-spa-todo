@@ -547,6 +547,9 @@ You can include your type definitions in this file until you create one for the 
 
   - Remove `node_modules/` and run `npm cache clean` then `npm install`
 
+- `RangeError: Maximum call stack size exceeded`
+  - This is a problem with minifying Angular 2 and it's recent JIT templates. If you set `mangle` to `false` then you should be good.
+
 ## Acknowledgements
 
 > [AngularClass](https://github.com/AngularClass) for their Angular 2 Webpack repo which served as a starting point for the front-end
