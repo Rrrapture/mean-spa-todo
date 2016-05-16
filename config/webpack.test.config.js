@@ -143,7 +143,12 @@ module.exports = {
     new DefinePlugin({
       // Environment helpers
       'ENV': JSON.stringify(ENV),
-      'HMR': false
+      'HMR': false,
+      'process.env': {
+        'ENV': JSON.stringify(ENV),
+        'NODE_ENV': JSON.stringify(ENV),
+        'HMR': false
+      }
     })
   ],
 
