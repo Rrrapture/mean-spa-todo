@@ -101,7 +101,7 @@
     "zone.js": "~0.6.12"
   },
   "devDependencies": {
-    "angular2-hmr": "~0.6.0",
+    "angular2-hmr": "~0.6.1",
     "awesome-typescript-loader": "~0.17.0",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
