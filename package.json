@@ -51,7 +51,7 @@
       "pretest": "npm run lint",
     "test": "node --max-old-space-size=4096 node_modules/karma/bin/karma start",
 
-    "ci": "npm run e2e && npm run test",
+    "ci": "npm run test && npm run e2e",
 
     "docs": "npm run typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/",
 
