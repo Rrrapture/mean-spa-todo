@@ -17,6 +17,9 @@ Error.stackTraceLimit = Infinity;
 // Prefer `CoreJS` over the polyfills commented out above
 require('core-js');
 
+// Typescript "emit helpers" polyfill
+require('ts-helpers');
+
 // Zone.js
 require('zone.js/dist/zone');
 require('zone.js/dist/long-stack-trace-zone');
