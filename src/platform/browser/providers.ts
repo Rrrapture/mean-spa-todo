@@ -11,11 +11,11 @@ import {FORM_PROVIDERS} from 'angular2/common';
 import {HTTP_PROVIDERS} from 'angular2/http';
 // Angular 2 Router
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
-// Angular 2 Material
-// import {MdRadioDispatcher} from '@angular2-material/radio/radio_dispatcher';
-  // const MATERIAL_PROVIDERS = [
-  //   MdRadioDispatcher
-// ];
+
+// Angular 2 Material 2
+//
+// TODO:(datatypevoid): replace with @angular2-material/all
+// import {MATERIAL_PROVIDERS} from './angular2-material2'
 
 //# Application Providers/Directives/Pipes
 //
