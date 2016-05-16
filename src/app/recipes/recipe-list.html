@@ -1,10 +1,10 @@
-<div *ngFor="#recipe of recipes" (click)="selected.emit(recipe)"
+<div *ngFor="let recipe of recipes" (click)="selected.emit(recipe)"
   class="recipe-card">
   <div>
     <h2>{{recipe.title}}</h2>
   </div>
   <ul class="list-inline">
-    <li *ngFor="#tag of recipe.tags">
+    <li *ngFor="let tag of recipe.tags">
       <span class="label label-warning">
         #{{tag.name}}
       </span>
@@ -21,12 +21,12 @@
     {{recipe.description}}
   </div>
   <ul>
-    <li *ngFor="#ingredient of recipe.ingredients">
+    <li *ngFor="let ingredient of recipe.ingredients">
       {{ ingredient.amount }} {{ ingredient.unit}} {{ ingredient.name }}
     </li>
   </ul>
   <ol>
-    <li *ngFor="#direction of recipe.directions">
+    <li *ngFor="let direction of recipe.directions">
       {{ direction.step }}
     </li>
   </ol>

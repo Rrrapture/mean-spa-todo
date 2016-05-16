@@ -15,7 +15,7 @@
           <button (click)="newTag()">
               Add new tag
           </button>
-          <div *ngFor="#tag of selectedRecipe.tags">
+          <div *ngFor="let tag of selectedRecipe.tags">
             <input [(ngModel)]="tag.name" placeholder="Enter a tag"
             type="text">
             <button (click)="deleteTag(tag)">
@@ -45,7 +45,7 @@
           <button (click)="newIngredient()">
               Add an Ingredient <i class="glyphicon glyphicon-plus"></i>
           </button>
-          <div *ngFor="#ingredient of selectedRecipe.ingredients">
+          <div *ngFor="let ingredient of selectedRecipe.ingredients">
             <input [(ngModel)]="ingredient.amount"
               placeholder="Amount?" type="text">
             <input [(ngModel)]="ingredient.unit"
@@ -62,7 +62,7 @@
           <button (click)="newDirection()">
               Add a Step in the Process
           </button>
-          <div *ngFor="#direction of selectedRecipe.directions">
+          <div *ngFor="let direction of selectedRecipe.directions">
             <input [(ngModel)]="direction.step"
               placeholder="Enter a step" type="text">
             <button (click)="deleteDirection(step)">

@@ -2,7 +2,7 @@
 //
 //** These `pipes` are available in any template **
 
-import {provide, PLATFORM_PIPES} from '@angular/core';
+import {PLATFORM_PIPES} from '@angular/core';
 
 //# APPLICATION_PIPES
 //

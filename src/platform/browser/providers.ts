@@ -10,7 +10,7 @@ import {FORM_PROVIDERS,
 // Angular 2 Http
 import {HTTP_PROVIDERS} from '@angular/http';
 // Angular 2 Router
-import {ROUTER_PROVIDERS} from '@angular/router';
+import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 
 // Angular 2 Material 2
 //
