@@ -70,5 +70,6 @@ export class Home {
   submitState(value) {
     console.log('submitState', value);
     this.appState.set('value', value);
+    this.localState.value = '';
   }
 }
