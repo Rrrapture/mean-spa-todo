@@ -30,6 +30,10 @@ const METADATA = {
 var envConfig = require('./config.json');
 
 module.exports = webpackMerge(commonConfig, {
+  // Merged metadata from webpack.common.js for index.html
+  //
+  // See: (custom attribute)
+  metadata: METADATA,
 
   // Developer tool to enhance debugging
   //
