@@ -10,7 +10,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 // Angular 2 Material 2
 //
 // TODO(datatypevoid): replace with @angular2-material/all
-// import {MATERIAL_DIRECTIVES} from ./angular2-material2
+import {MATERIAL_DIRECTIVES} from './angular2-material2';
 
 // APPLICATION_DIRECTIVES
 //
@@ -18,8 +18,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 export const APPLICATION_DIRECTIVES = [
 
   ...ROUTER_DIRECTIVES,
-  // TODO(datatypevoid): uncomment when material is fixed
-  //...MATERIAL_DIRECTIVES
+  ...MATERIAL_DIRECTIVES
 ];
 
 export const DIRECTIVES = [
