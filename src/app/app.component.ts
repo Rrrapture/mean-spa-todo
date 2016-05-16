@@ -79,7 +79,7 @@ import {Recipes} from './recipes/recipes.component';
       </div>
     </footer>
 
-    <pre>this.state = {{ state | json }}</pre>
+    <pre>this.appState.state = {{ appState.state | json }}</pre>
   `
 })
 @RouteConfig([
@@ -100,16 +100,10 @@ export class App {
   // Alternative to using `redux`
   constructor(public appState: AppState) {}
 
-  // Get the current application state
-  get state() {
-
-    return this.appState.get();
-  }
-
   // Fire off upon initialization
   ngOnInit() {
 
-    console.log('Initial App State', this.state);
+    console.log('Initial App State', this.appState.state);
   }
 }
 

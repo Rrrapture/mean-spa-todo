@@ -1,21 +1,31 @@
 import {Injectable} from 'angular2/core';
 import {HmrState} from 'angular2-hmr';
 
-// This serves as an alternative to using the `redux` store and methods
 @Injectable()
 export class AppState {
+  @HmrState() _state = {};
 
-  @HmrState() _state = {}; // you must set the initial value
-    constructor() {
+  constructor() {
+
+  }
+
+  get state() {
+    return this._state = this._clone(this._state);
+  }
+  set state(value) {
+    throw new Error('Do not mutate the `.state` directly!');
   }
 
   get(prop?: any) {
-
-    return this._state[prop] || this._state;
+    const state = this.state;
+    return state[prop] || state;
   }
 
   set(prop: string, value: any) {
-
     return this._state[prop] = value;
+  }
+
+  _clone(object) {
+    return JSON.parse(JSON.stringify( object ));
   }
 }

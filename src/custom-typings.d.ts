@@ -21,7 +21,6 @@ import * as _ from 'lodash'
  *
  */
 
-
 // Extra variables that live on Global that will be replaced by webpack DefinePlugin
 declare var ENV: string;
 declare var HMR: boolean;
@@ -55,14 +54,11 @@ interface ErrorStackTraceLimit {
   stackTraceLimit: number;
 }
 
-
-
 // Extend typings
 interface NodeRequire extends WebpackRequire {}
 interface ErrorConstructor extends ErrorStackTraceLimit {}
 interface NodeModule extends WebpackModule {}
 interface Global extends GlobalEnvironment  {}
-
 
 declare namespace Reflect {
   function decorate(decorators: ClassDecorator[], target: Function): Function;
@@ -97,7 +93,6 @@ declare namespace Reflect {
   function deleteMetadata(metadataKey: any, target: Object): boolean;
   function deleteMetadata(metadataKey: any, target: Object, targetKey: string | symbol): boolean;
 }
-
 
 // We need this here since there is a problem with Zone.js typings
 interface Thenable<T> {
