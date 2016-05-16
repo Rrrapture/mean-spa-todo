@@ -2,16 +2,18 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-nav ul {
+md-toolbar ul {
   display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 60px;
 }
-nav li {
+
+md-toolbar li {
   display: inline;
 }
-nav li.active {
+
+md-toolbar li.active {
   background-color: lightgray;
 }

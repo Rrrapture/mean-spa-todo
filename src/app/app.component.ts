@@ -46,32 +46,38 @@ import {Recipes} from './recipes/recipes.component';
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
   template: `
-    <header>
+    <md-toolbar color="primary">
+      <span>Hello {{ name }}</span>
       <nav>
-        <h1>Hello {{ name }}</h1>
         <ul>
           <li router-active>
             <a [routerLink]=" ['Index'] ">Index</a>
           </li>
+          |
           <li router-active>
             <a [routerLink]=" ['Home'] ">Home</a>
           </li>
+          |
           <li router-active>
             <a [routerLink]=" ['Todo'] ">Todo</a>
           </li>
+          |
           <li router-active>
             <a [routerLink]=" ['Recipes'] ">NG2 Redux</a>
           </li>
+          |
           <li router-active>
             <a [routerLink]=" ['About'] ">About</a>
           </li>
         </ul>
       </nav>
-    </header>
+    </md-toolbar>
 
     <main>
       <router-outlet></router-outlet>
     </main>
+
+    <pre>this.appState.state = {{ appState.state | json }}</pre>
 
     <footer>
       Angular 2 MEAN Webpack Starter by <a [href]="url">@datatype_void</a>
@@ -79,8 +85,6 @@ import {Recipes} from './recipes/recipes.component';
         <img [src]="angularLogo" width="10%">
       </div>
     </footer>
-
-    <pre>this.appState.state = {{ appState.state | json }}</pre>
   `
 })
 @RouteConfig([

@@ -2,6 +2,10 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+body {
+  margin: 0;
+}
+
 /**
  * Set up a decent box model on the root element
  */
@@ -17,7 +21,7 @@ html {
  */
 *, *::before, *::after {
   box-sizing: inherit;
-} 
+}
 
 /**
  * Basic styles for links
