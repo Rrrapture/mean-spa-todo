@@ -30,9 +30,10 @@ var browser = require('angular2/platform/testing/browser');
 
 testing.setBaseTestProviders(
   browser.TEST_BROWSER_PLATFORM_PROVIDERS,
-  browser.TEST_BROWSER_APPLICATION_PROVIDERS);
+  browser.TEST_BROWSER_APPLICATION_PROVIDERS
+);
 
-  Object.assign(global, testing);
+Object.assign(global, testing);
 
 /*
   Ok, this is kinda crazy. We can use the the context method on
