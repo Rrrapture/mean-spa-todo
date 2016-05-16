@@ -75,6 +75,9 @@ import {Recipes} from './recipes/recipes.component';
       </md-toolbar>
     </header>
 
+    <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
+    </md-progress-bar>
+
     <main>
       <router-outlet></router-outlet>
     </main>
@@ -105,7 +108,7 @@ export class App {
 
   // Pass in our application `state`
   // Alternative to using `redux`
-  constructor(public appState: AppState) {}
+  constructor(public appState: AppState, public router: Router) {}
 
   // Fire off upon initialization
   ngOnInit() {
