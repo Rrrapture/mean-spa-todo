@@ -5,9 +5,7 @@
   </a>
 </p>
 
-# v#!g@r [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation)
-
-[![Join the chat at https://gitter.im/datatypevoid/vulgar](https://badges.gitter.im/datatypevoid/vulgar.svg)](https://gitter.im/datatypevoid/vulgar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# v#!g@r [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation)[![Join the chat at https://gitter.im/datatypevoid/vulgar](https://badges.gitter.im/datatypevoid/vulgar.svg)](https://gitter.im/datatypevoid/vulgar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## MEAN Stack Development Starter
 
