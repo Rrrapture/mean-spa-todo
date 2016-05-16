@@ -1,5 +1,3 @@
-import {Router} from '@angular/router';
-import {isPresent} from '@angular/src/facade/lang';
 import {
   Directive,
   Query,
@@ -10,7 +8,8 @@ import {
   Optional,
   Input
 } from '@angular/core';
-import {Instruction, RouterLink} from '@angular/router-deprecated';
+import {isPresent} from '@angular/core/src/facade/lang';
+import {Instruction, Router, RouterLink} from '@angular/router-deprecated';
 
 /*
  * RouterActive dynamically finds the first element with routerLink and toggles the active class
