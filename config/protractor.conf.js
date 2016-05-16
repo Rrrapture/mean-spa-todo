@@ -35,8 +35,6 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
 
-  seleniumServerJar: "node_modules/protractor/selenium/selenium-server-standalone-2.48.2.jar",
-
   /**
    * Angular 2 configuration
    *
