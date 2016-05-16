@@ -8,9 +8,9 @@ var webpack = require('webpack');
 var helpers = require('./helpers');
 
 //# Webpack Plugins
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const CopyWebpackPlugin = (CopyWebpackPlugin = require('copy-webpack-plugin'), CopyWebpackPlugin.default || CopyWebpackPlugin);
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 //# Webpack Constants
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
