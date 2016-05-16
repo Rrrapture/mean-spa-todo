@@ -23,5 +23,5 @@ export const APPLICATION_DIRECTIVES = [
 
 export const DIRECTIVES = [
 
-  provide(PLATFORM_DIRECTIVES, {useValue: APPLICATION_DIRECTIVES, multi: true})
+  provide(PLATFORM_DIRECTIVES, {multi: true, useValue: APPLICATION_DIRECTIVES})
 ];
