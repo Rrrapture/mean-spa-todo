@@ -100,7 +100,7 @@
     "babel-register": "^6.4.3",
     "babel-runtime": "^6.3.19",
     "chai": "^3.5.0",
-    "codelyzer": "0.0.12",
+    "codelyzer": "0.0.15",
     "compression-webpack-plugin": "^0.3.1",
     "concurrently": "^2.0.0",
     "copy-webpack-plugin": "^1.1.1",
