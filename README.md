@@ -42,6 +42,8 @@ The rest of the stack features:
 
 ## Quick start
 
+**Make sure you have Node version >= 4.0 and NPM >= 3**
+
 > Install the stack then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
@@ -95,6 +97,7 @@ go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 - [TypeScript](#typescript)
 
 - [Typings](#typings)
+
 - [Frequently asked questions](#frequently-asked-questions)
 - [Support, Questions, or Feedback](#support-questions-or-feedback)
 - [License](#license)
@@ -273,7 +276,7 @@ or use [Node Version Manager](https://github.com/creationix/nvm) to easily manag
 - _MongoDB_ - Follow the tutorial here - [Install mongodb on OSX](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
 - _git_ - Get git [from here](http://git-scm.com/download/mac).
 
-### _Ensure you are running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+_
+### _Ensure you are running the latest versions Node `v4.x.x`+ and NPM `3.x.x`+_
 
 ## Dependencies
 
@@ -576,8 +579,7 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br>
-<br>
+<br><br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
