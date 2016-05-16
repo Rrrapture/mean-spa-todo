@@ -165,7 +165,6 @@
   "bugs": {
     "url": "https://github.com/datatypevoid/vulgar/issues"
   },
-  "enginesStrict": true,
   "engines": {
     "node": ">= 4.2.1",
     "npm": ">= 3"
