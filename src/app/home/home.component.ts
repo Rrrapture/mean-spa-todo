@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {AppState} from '../app.service';
 
 import {Title} from './services/title';
@@ -10,7 +10,7 @@ import {AccordionGroup} from
   '../shared/components/accordion/accordion-group.component';
 
 // Import NgFor directive
-import {NgFor} from 'angular2/common';
+import {NgFor} from '@angular/common';
 
 @Component({
   // The selector is what angular internally uses

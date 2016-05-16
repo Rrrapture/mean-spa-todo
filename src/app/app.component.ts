@@ -13,8 +13,8 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component, ViewEncapsulation} from 'angular2/core';
-import {RouteConfig, Router} from 'angular2/router';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {RouteConfig, Router} from '@angular/router-deprecated';
 
 import {AppState} from './app.service';
 
@@ -23,7 +23,7 @@ import {RouterActive} from './shared/directives/router-active/router-active.dire
 import {Home} from './home';
 
 // Import NgFor directive
-import {NgFor} from 'angular2/common';
+import {NgFor} from '@angular/common';
 
 // Import Todo component
 import {Todo} from './todo/todo.component';

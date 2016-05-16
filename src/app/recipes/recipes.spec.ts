@@ -6,7 +6,7 @@ import {
   it,
   describe,
   expect
-} from 'angular2/testing';
+} from '@angular/core/testing';
 
 describe('Recipes', () => {
   describe('`selectedRecipe` store', () => {

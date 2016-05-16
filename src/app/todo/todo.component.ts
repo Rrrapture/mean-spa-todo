@@ -1,13 +1,13 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 import {TodoService} from './todo.service';
 
 // We `import` `http` into our `TodoService` but we can only
 // specify providers within our component
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 // Import NgFor directive
-import {NgFor} from 'angular2/common';
+import {NgFor} from '@angular/common';
 
 // Create metadata with the `@Component` decorator
 @Component({

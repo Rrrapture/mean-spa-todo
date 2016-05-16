@@ -10,7 +10,7 @@
 import {Component,
   Input,
   Output,
-  EventEmitter} from 'angular2/core';
+  EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'rating',

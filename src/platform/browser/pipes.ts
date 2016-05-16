@@ -2,7 +2,7 @@
 //
 //** These `pipes` are available in any template **
 
-import {provide, PLATFORM_PIPES} from 'angular2/core';
+import {provide, PLATFORM_PIPES} from '@angular/core';
 
 //# APPLICATION_PIPES
 //
@@ -12,5 +12,5 @@ export const APPLICATION_PIPES = [
 ];
 
 export const PIPES = [
-  provide(PLATFORM_PIPES, { multi: true, useValue: APPLICATION_PIPES })
+  {provide: PLATFORM_PIPES, multi: true, useValue: APPLICATION_PIPES }
 ];

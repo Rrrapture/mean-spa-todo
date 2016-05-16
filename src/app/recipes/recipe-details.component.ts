@@ -12,7 +12,7 @@ import {Component,
   Output,
   EventEmitter,
   ChangeDetectionStrategy
-} from 'angular2/core';
+} from '@angular/core';
 
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';

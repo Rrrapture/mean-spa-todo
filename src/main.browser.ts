@@ -1,5 +1,5 @@
 //# Providers provided by Angular
-import {bootstrap} from 'angular2/platform/browser';
+import {bootstrap} from '@angular/platform/browser';
 
 //## Platform and Environment
 //

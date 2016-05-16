@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 // Import NgClass directive
-import {NgClass} from 'angular2/common';
+import {NgClass} from '@angular/common';
 
 import {Accordion} from './accordion.component';
 
