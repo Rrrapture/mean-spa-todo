@@ -81,6 +81,10 @@ $ npm start
 $ gulp serve
 ```
 
+# If you are located in China, use `cnpm`
+
+## <https://github.com/cnpm/cnpm>
+
 go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 
 # Table of Contents
@@ -99,7 +103,9 @@ go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 - [Typings](#typings)
 
 - [Frequently asked questions](#frequently-asked-questions)
+
 - [Support, Questions, or Feedback](#support-questions-or-feedback)
+
 - [License](#license)
 
 ## File Structure
@@ -565,6 +571,10 @@ You can include your type definitions in this file until you create one for the 
 
   - We are using inline source-maps and hot module replacement which will increase the bundle size.
 
+- If you are located in China, use `cnpm`
+
+  - <https://github.com/cnpm/cnpm>
+
 ## Acknowledgements
 
 > [AngularClass](https://github.com/AngularClass) for their Angular 2 Webpack repo which served as a starting point for the front-end
@@ -579,7 +589,8 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br><br>
+<br>
+<br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
