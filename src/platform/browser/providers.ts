@@ -2,8 +2,6 @@
 //
 //** These `providers` are available in any template **
 
-import {provide} from '@angular/core';
-
 // Angular 2
 import {FORM_PROVIDERS,
         LocationStrategy,
