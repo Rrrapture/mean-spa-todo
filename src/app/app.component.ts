@@ -13,7 +13,7 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component} from 'angular2/core';
+import {Component, ViewEncapsulation} from 'angular2/core';
 import {RouteConfig, Router} from 'angular2/router';
 
 import {AppState} from './app.service';
@@ -41,6 +41,7 @@ import {Recipes} from './recipes/recipes.component';
   directives: [ Todo,
                 NgFor,
                 RouterActive],
+  encapsulation: ViewEncapsulation.None,
   pipes: [],
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
