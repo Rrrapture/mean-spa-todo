@@ -46,32 +46,34 @@ import {Recipes} from './recipes/recipes.component';
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
   template: `
-    <md-toolbar color="primary">
-      <span>Hello {{ name }}</span>
-      <nav>
-        <ul>
-          <li router-active>
-            <a [routerLink]=" ['Index'] ">Index</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['Home'] ">Home</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['Todo'] ">Todo</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['Recipes'] ">NG2 Redux</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['About'] ">About</a>
-          </li>
-        </ul>
-      </nav>
-    </md-toolbar>
+    <header>
+      <md-toolbar color="primary">
+        <span>Hello {{ name }}</span>
+        <nav>
+          <ul>
+            <li router-active>
+              <a [routerLink]=" ['Index'] ">Index</a>
+            </li>
+            |
+            <li router-active>
+              <a [routerLink]=" ['Home'] ">Home</a>
+            </li>
+            |
+            <li router-active>
+              <a [routerLink]=" ['Todo'] ">Todo</a>
+            </li>
+            |
+            <li router-active>
+              <a [routerLink]=" ['Recipes'] ">NG2 Redux</a>
+            </li>
+            |
+            <li router-active>
+              <a [routerLink]=" ['About'] ">About</a>
+            </li>
+          </ul>
+        </nav>
+      </md-toolbar>
+    </header>
 
     <main>
       <router-outlet></router-outlet>
