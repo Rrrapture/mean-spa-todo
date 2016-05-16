@@ -108,7 +108,7 @@ export class App {
 
   // Pass in our application `state`
   // Alternative to using `redux`
-  constructor(public appState: AppState, public router: Router) {}
+  constructor(public appState: AppState) {}
 
   // Fire off upon initialization
   ngOnInit() {
