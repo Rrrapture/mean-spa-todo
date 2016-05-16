@@ -57,7 +57,7 @@
 
     "start": "concurrently --kill-others --raw \"npm run server:dev\" \"npm run watch\"",
 
-    "postinstall": "npm run typings --install",
+    "postinstall": "npm run typings -- install",
 
       "preversion": "npm test",
     "version": "npm run build",
