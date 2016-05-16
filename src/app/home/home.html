@@ -1,48 +1,50 @@
-<md-card>
-  <md-card-content>
+<div class="card-container">
+  <md-card x-large class="sample-content">Your Content Here</md-card>
+  <md-card>
+    <md-card-title>Local State</md-card-title>
+    <md-card-content>
 
-    <md-card>
-      <p>
-        <button type="button" class="btn btn-default" (click)="removeDynamic()">
-          Remove last dynamic
-        </button>
-      </p>
+      <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
 
-      <accordion close-others="true">
-        <accordion-group heading="This is the header" is-open="true">
-          This is the content
-        </accordion-group>
-        <accordion-group [heading]="group.heading" *ngFor="#group of groups">
-          {{group.content}}
-        </accordion-group>
-        <accordion-group heading="Another group" [is-open]="isOpen">
-          More content
-        </accordion-group>
-      </accordion>
-    </md-card>
+        <md-input
+          placeholder="Submit Local State to App State"
+          [value]="localState.value"
+          (input)="localState.value = $event.target.value"
+          autofocus>
+        </md-input>
 
-    <span x-large>Your Content Here</span>
+        <button md-raised-button color="primary">Submit Value</button>
+      </form>
+      <!--
+        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
+        Rather than wiring up two-way data-binding ourselves with [value] and (input)
+        we can use Angular's [(ngModel)] syntax
+        <input type="text" [(ngModel)]="localState.value" autofocus>
+      -->
 
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
+      <pre>this.localState = {{ localState | json }}</pre>
 
-      <md-input
-        placeholder="Submit Local State to App State"
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        autofocus>
-      </md-input>
+    </md-card-content>
+  </md-card>
 
-      <button md-raised-button color="primary">Submit Value</button>
-    </form>
-    <!--
-      <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-      Rather than wiring up two-way data-binding ourselves with [value] and (input)
-      we can use Angular's [(ngModel)] syntax
-      <input type="text" [(ngModel)]="localState.value" autofocus>
-    -->
+  <md-card>
+    <p>
+      <button type="button" class="btn btn-default" (click)="removeDynamic()">
+        Remove last dynamic
+      </button>
+    </p>
 
-    <hr>
-    <pre>this.localState = {{ localState | json }}</pre>
+    <accordion close-others="true">
+      <accordion-group heading="This is the header" is-open="true">
+        This is the content
+      </accordion-group>
+      <accordion-group [heading]="group.heading" *ngFor="#group of groups">
+        {{group.content}}
+      </accordion-group>
+      <accordion-group heading="Another group" [is-open]="isOpen">
+        More content
+      </accordion-group>
+    </accordion>
+  </md-card>
 
-  </md-card-content>
-</md-card>
+</div>

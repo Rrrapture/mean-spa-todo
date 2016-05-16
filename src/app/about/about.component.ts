@@ -12,9 +12,9 @@ console.log('`About` component loaded asynchronously');
   selector: 'about',
   template: `
     <md-card>
-      <h1>
+      <h3>
         david.r.niciforovic@gmail.com
-      </h1>
+      </h3>
     </md-card>
   `,
 })

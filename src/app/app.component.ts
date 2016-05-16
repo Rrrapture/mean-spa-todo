@@ -46,50 +46,39 @@ import {Recipes} from './recipes/recipes.component';
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
   template: `
-    <header>
+    <md-content>
       <md-toolbar color="primary">
-        <span>Hello {{ name }}</span>
-        <nav>
-          <ul>
-            <li router-active>
-              <a [routerLink]=" ['Index'] ">Index</a>
-            </li>
-            |
-            <li router-active>
-              <a [routerLink]=" ['Home'] ">Home</a>
-            </li>
-            |
-            <li router-active>
-              <a [routerLink]=" ['Todo'] ">Todo</a>
-            </li>
-            |
-            <li router-active>
-              <a [routerLink]=" ['Recipes'] ">NG2 Redux</a>
-            </li>
-            |
-            <li router-active>
-              <a [routerLink]=" ['About'] ">About</a>
-            </li>
-          </ul>
-        </nav>
+          <span>{{ name }}</span>
+          <span class="fill"></span>
+          <button md-button router-active [routerLink]=" ['Index'] ">
+            Index
+          </button>
+          <button md-button router-active [routerLink]=" ['Home'] ">
+            Home
+          </button>
+          <button md-button router-active [routerLink]=" ['Todo'] ">
+            Todo
+          </button>
+          <button md-button router-active [routerLink]=" ['Recipes'] ">
+            Recipes
+          </button>
+          <button md-button router-active [routerLink]=" ['About'] ">
+            About
+          </button>
       </md-toolbar>
-    </header>
 
-    <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
-    </md-progress-bar>
+      <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
+      </md-progress-bar>
 
-    <main>
       <router-outlet></router-outlet>
-    </main>
 
-    <pre>this.appState.state = {{ appState.state | json }}</pre>
+      <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
-    <footer>
-      Angular 2 MEAN Webpack Starter by <a [href]="url">@datatype_void</a>
-      <div>
-        <img [src]="angularLogo" width="10%">
-      </div>
-    </footer>
+      <footer>
+        <img [src]="angularLogo" width="7%">
+        Angular 2 MEAN Webpack Starter by <a [href]="url">@datatype_void</a>
+      </footer>
+    </md-content>
   `
 })
 @RouteConfig([
