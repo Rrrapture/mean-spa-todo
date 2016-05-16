@@ -1,9 +1,6 @@
 [![Dependency Status](https://david-dm.org/datatypevoid/vulgar.svg)](https://david-dm.org/datatypevoid/vulgar) [![Build Status](https://travis-ci.org/datatypevoid/vulgar.svg?branch=master)](https://travis-ci.org/datatypevoid/vulgar) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/vulgar) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
-<p align="center">
-  <a href="http://www.davidniciforovic.com" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/10481547/13732046/5ba42ab0-e94f-11e5-9962-ab04cbd6779f.png" alt="MEAN with NG2 and Webpack" />
-  </a>
-</p>
+
+[![MEAN with NG2 and Webpack](https://cloud.githubusercontent.com/assets/10481547/13732046/5ba42ab0-e94f-11e5-9962-ab04cbd6779f.png)](http://www.davidniciforovic.com)
 
 # v#!g@r [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation) [![Join the chat at https://gitter.im/datatypevoid/vulgar](https://badges.gitter.im/datatypevoid/vulgar.svg)](https://gitter.im/datatypevoid/vulgar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -87,9 +84,11 @@ go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 
 - [File Structure](#file-structure)
 - [Getting Started](#getting-started)
+
   - [Dependencies](#dependencies)
   - [Installing](#installing)
   - [Running the app](#running-the-app)
+
 - [Contributing](#contributing)
 - [TypeScript](#typescript)
 - [Typings](#typings)
@@ -267,11 +266,11 @@ or use [Node Version Manager](https://github.com/creationix/nvm) to easily manag
 
 ### OSX
 
-- _Node.js_ -  [Download](http://nodejs.org/download/) and Install Node.js or use the packages within brew or macports.
+- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js or use the packages within brew or macports.
 - _MongoDB_ - Follow the tutorial here - [Install mongodb on OSX](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
 - _git_ - Get git [from here](http://git-scm.com/download/mac).
 
-### *Ensure you are running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+*
+### _Ensure you are running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+_
 
 ## Dependencies
 
@@ -323,6 +322,7 @@ You should definitely change your `SESSION_SECRET` for even the most lackadaisic
 ```
 
 ### A Quick Note About the `config.json` Object
+
 This object is not absolutely required. You can pass these values in however you want, whether it is through the command line or some alternative method. This just provided me with an easy way of storing a couple of values that do not change often.
 
 ## Running the app
@@ -424,10 +424,12 @@ $ npm run e2e:live
 ```
 
 # Configuration
+
 Configuration files live in `config/`. We are currently using `mongooose`, `passportJS`, `webpack`, `mocha`, `karma`, and `protractor` for different stages and parts of your full-stack application
 
 # Contributing
-Contibutors are welcome. If you are interested in collaborating with us or contributing to this project, please join our chat on [Slack]( http://www.davidniciforovic.com/wp-login.php?action=slack-invitation). You can also view our `Trello` board which is where the roadmap and task backlog live here https://trello.com/b/Kk4qnt2T/vulgar
+
+Contibutors are welcome. If you are interested in collaborating with us or contributing to this project, please join our chat on [Slack](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation). You can also view our `Trello` board which is where the roadmap and task backlog live here <https://trello.com/b/Kk4qnt2T/vulgar>
 
 # TypeScript
 
@@ -550,7 +552,12 @@ You can include your type definitions in this file until you create one for the 
   - Remove `node_modules/` and run `npm cache clean` then `npm install`
 
 - `RangeError: Maximum call stack size exceeded`
+
   - This is a problem with minifying Angular 2 and it's recent JIT templates. If you set `mangle` to `false` then you should be good.
+
+- Why is the size of my app larger in development?
+
+  - We are using inline source-maps and hot module replacement which will increase the bundle size.
 
 ## Acknowledgements
 
@@ -566,10 +573,11 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br><br>
+<br>
+<br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
 # License
 
- [MIT](/LICENSE)
+[MIT](/LICENSE)
