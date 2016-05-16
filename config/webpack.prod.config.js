@@ -120,8 +120,10 @@ module.exports = webpackMerge(commonConfig, {
 
       beautify: false, //prod
 
-      // mangle: { screw_ie8 : true }, //prod
-      mangle: false,
+      mangle: {
+        screw_ie8 : true,
+        keep_fnames: true
+      }, // Production
       /*
       mangle: {
         screw_ie8: true,
