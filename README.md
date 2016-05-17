@@ -44,6 +44,10 @@ The rest of the stack features:
 
 **Make sure you have Node version >= 4.0 and NPM >= 3**
 
+### If you are located in China, use `cnpm`
+
+#### <https://github.com/cnpm/cnpm>
+
 > Install the stack then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
 ```bash
@@ -80,10 +84,6 @@ $ npm start
 # start `Express` server
 $ gulp serve
 ```
-
-# If you are located in China, use `cnpm`
-
-## <https://github.com/cnpm/cnpm>
 
 go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
 
@@ -589,8 +589,7 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br>
-<br>
+<br><br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
