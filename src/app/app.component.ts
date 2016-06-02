@@ -76,7 +76,7 @@ import {Recipes} from './recipes/recipes.component';
 
       <footer>
         <img [src]="angularLogo" width="7%">
-        Angular 2 MEAN Webpack Starter by <a [href]="url">@datatype_void</a>
+        <span>Angular 2 MEAN Webpack Starter by <a [href]="url">@datatype_void</a><span>
       </footer>
     </md-content>
   `
