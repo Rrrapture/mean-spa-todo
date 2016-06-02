@@ -301,7 +301,7 @@ Once you have those, you should install these globals with `npm install --global
 
 - `$ npm install -g vulgar-cli generator-vulgar`
 - `$ vulgar init` to install a new instance of the v#!g@r `MEAN` stack framework
-- `$ npm install -g typings webpack webpack-dev-server concurrently` to install global dependencies
+- `$ npm install -g typings webpack webpack-dev-server concurrently rimraf` to install global dependencies
 - `$ npm install` to install all local dependencies
 - `$ typings install` to install necessary typings
 - `$ npm run build` to build necessary front-end code with Webpack
@@ -589,7 +589,8 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br><br>
+<br>
+<br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
