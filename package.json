@@ -50,6 +50,8 @@
     "webdriver:update": "npm run webdriver-manager update",
     "webdriver:start": "npm run webdriver-manager start",
 
+    "fix:line-endings": "find . \\( -type f -and -not -path '*/node_modules/*' \\) -exec dos2unix {} \\;",
+
     "lint": "npm run tslint src/**/*.ts",
 
       "pree2e": "npm run webdriver:update -- --standalone",
