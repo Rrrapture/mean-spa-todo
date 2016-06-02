@@ -8,6 +8,7 @@ import {MdRadioGroup, MdRadioButton, MdRadioDispatcher} from '@angular2-material
 import {MdProgressBar} from '@angular2-material/progress-bar';
 import {MdSpinner, MdProgressCircle} from '@angular2-material/progress-circle';
 import {MdToolbar} from '@angular2-material/toolbar';
+import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
 
 /*
  * We are grouping the module so we only need to
@@ -29,7 +30,8 @@ export const MATERIAL_DIRECTIVES = [
     MdRadioGroup,
     MdSpinner,
     MdProgressBar,
-    MdProgressCircle
+    MdProgressCircle,
+    MdIcon
   ],
   ...MD_INPUT_DIRECTIVES,
   ...MD_LIST_DIRECTIVES,
@@ -37,5 +39,6 @@ export const MATERIAL_DIRECTIVES = [
 ];
 
 export const MATERIAL_PROVIDERS = [
-  MdRadioDispatcher
+  MdRadioDispatcher,
+  MdIconRegistry
 ];
