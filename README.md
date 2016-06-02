@@ -575,6 +575,10 @@ You can include your type definitions in this file until you create one for the 
 
   - <https://github.com/cnpm/cnpm>
 
+- node-pre-gyp ERR in npm install (Windows)
+
+  - install `Python x86` version between `2.5` and `3.0` on Windows machines
+
 ## Acknowledgements
 
 > [AngularClass](https://github.com/AngularClass) for their Angular 2 Webpack repo which served as a starting point for the front-end
@@ -589,8 +593,7 @@ You can include your type definitions in this file until you create one for the 
 
 enjoy -- **Da5id**
 
-<br>
-<br>
+<br><br>
 
 > Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
 
