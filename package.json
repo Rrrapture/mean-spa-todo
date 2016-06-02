@@ -1,6 +1,6 @@
 {
   "name": "vulgar",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A simple and scalable MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage, Dev/Prod), Express, MongoDB, Mongoose, Node, Redux, @ngrx/store,  PassportJS, Socket.io, Karma, Protractor, Jasmine, Istanbul, SASS Support, TypeScript, TSLint, NG2Lint, Hot Module Replacement, Docco, Gulp, and Webpack by @datatype_void",
   "keywords": [
     "angular2",
