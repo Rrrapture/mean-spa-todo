@@ -1,6 +1,6 @@
 {
-  "name": "vulgar",
-  "version": "2.0.4",
+  "name": "mean-spa-todo",
+  "version": "1.0.0",
   "description": "A simple and scalable MEAN stack development kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage, Dev/Prod), Express, MongoDB, Mongoose, Node, Redux, @ngrx/store,  PassportJS, Socket.io, Karma, Protractor, Jasmine, Istanbul, SASS Support, TypeScript, TSLint, NG2Lint, Hot Module Replacement, Docco, Gulp, and Webpack by @datatype_void",
   "keywords": [
     "angular2",
@@ -187,7 +187,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/datatypevoid/vulgar.git"
+    "url": "https://github.com/Rrrapture/mean-spa-todo.git"
   },
   "bugs": {
     "url": "https://github.com/datatypevoid/vulgar/issues"
