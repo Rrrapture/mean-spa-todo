@@ -10,8 +10,8 @@
     "express",
     "mongodb"
   ],
-  "author": "David Newman <blackshuriken@hotmail.com>",
-  "homepage": "https://github.com/datatypevoid/vulgar",
+  "author": "Rachelle Gray",
+  "homepage": "https://github.com/Rrrapture",
   "license": "MIT",
   "scripts": {
     "rimraf": "rimraf",
