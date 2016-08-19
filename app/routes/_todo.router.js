@@ -17,7 +17,8 @@ export default (app, router) => {
         // Access at POST http://localhost.yourport/api/todo
         .post((req, res) => {
             Todo.create({
-                text : req.body.text
+                text : req.body.text,
+                priority : req.body.priority
             }, (err, todo) => {
                 if (err)
                     res.send(err);

@@ -13,7 +13,7 @@
             <div class="checkbox" *ngFor="let todo of todos">
                 <label>
                     <input type="checkbox" (click)="deleteTodo(todo._id)" bind-checked="false">
-                    {{ todo.text }}
+                    {{ todo.text }}, priority: {{ todo.priority }}
                 </label>
             </div>
 
@@ -28,6 +28,8 @@
 
                     <!-- BIND THIS VALUE TO todoData.text IN ANGULAR -->
                     <input type="text" class="form-control input-lg text-center" placeholder="Plant the common yarrow in your California native plant yard" [(ngModel)]="todoData.text" required>
+                    <input type="text" class="form-control input-lg text-center" placeholder="4" [(ngModel)]="todoData.priority" required>
+
                 </div>
 
                 <!-- createToDo() WILL CREATE NEW TODOS -->

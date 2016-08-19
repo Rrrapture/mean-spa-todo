@@ -20,7 +20,8 @@ export class Todo {
     //todos = [];
     // Initialize our `todoData.text` to an empty `string`
     todoData = {
-        text: ''
+        text: '',
+        priority: null
     };
 
     constructor(public todoService:TodoService) {
@@ -34,6 +35,7 @@ export class Todo {
                 this.todos = res;
                 // Reset `todo` input
                 this.todoData.text = '';
+                this.todoData.priority = null;
             })
     }
 
@@ -42,6 +44,7 @@ export class Todo {
             .subscribe((res) => {
                 this.todos = res;
                 this.todoData.text = '';
+                this.todoData.priority = null;
             })
     }
 
